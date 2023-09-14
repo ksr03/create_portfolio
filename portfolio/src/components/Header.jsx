@@ -2,13 +2,11 @@ import React from 'react'
 import { Text, HStack, Flex, Spacer, Link } from '@chakra-ui/react';
 import { FaGithubSquare } from 'react-icons/fa'
 import { FaSquareXTwitter } from 'react-icons/fa6'
-import { color } from 'framer-motion';
-
 
 const Header = () => {
   return (
         <Flex minWidth='max-content' alignItems='center' bg="gray" h="50px">
-            <Text fontSize="25px" marginLeft="20px" color="white">ポートフォリオ</Text>
+            <Text fontSize="30px" marginLeft="20px" color="white">Portfolio</Text>
             <Spacer/>
             <HStack spacing="15px" marginRight="20px">
                 <Link href='https://twitter.com/shirokichi_cr' rounded="10px" _hover={{ backgroundColor: "#CCCCCC"}}>
