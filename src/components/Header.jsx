@@ -35,8 +35,8 @@ const Header = () => {
             backdropFilter='auto' 
             backdropBlur='5px'
             filter='auto'
-            brightness='102%'
-            zIndex={'sticky'}
+            brightness='110%'
+            zIndex='9999'
             position='fixed'
             top='0'
         >
