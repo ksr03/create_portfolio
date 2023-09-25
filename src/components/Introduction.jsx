@@ -5,7 +5,7 @@ import image from '../images/image.png'
 
 const Introduction = () => {
   return (
-    <VStack bg='#565E64' w='600px' h='500px' align='flex-start' position='relative' >
+    <VStack bg='#565E64' w='85%' h='500px' align='flex-start' position='relative' >
         <Image 
             src={image}
             alt='イメージ画像'
