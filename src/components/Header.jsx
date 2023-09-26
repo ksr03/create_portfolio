@@ -40,7 +40,7 @@ const Header = () => {
             position='fixed'
             top='0'
         >
-            <Link href='' style={{ textDecoration: 'none' }}>
+            <Link href='/' style={{ textDecoration: 'none' }}>
                 <Text fontSize="25px" fontWeight='bold' marginLeft="20px" color="#3D454B">
                     Portfolio
                 </Text>
