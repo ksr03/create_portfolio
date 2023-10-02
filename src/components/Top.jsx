@@ -20,12 +20,12 @@ const Top = () => {
                 }} 
                 marginTop={50}
                 color='white' 
-                fontSize='25px' 
+                fontSize='23px' 
                 fontWeight='hairline' 
                 textAlign='left'
             >
-                ○○○○です。<br/>
-                簡単な自己紹介文
+                ものづくりが好きな学生です。<br/>
+                ゆるく開発しています。
             </Text>
     </Center>
   )
