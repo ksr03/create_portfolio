@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div className="App">
       <Header />
-      <VStack justify='center' spacing={0}>
+      <VStack marginBottom={50} justify='center' spacing={0}>
         <Top />
         <About />
       </VStack>

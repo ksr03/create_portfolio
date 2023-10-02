@@ -8,7 +8,6 @@ import user_image from '../images/user_image.jpg'
 const About = () => {
   return (
     <VStack 
-        marginBottom={50}
         w='80%'
         maxWidth='1000px'
         bg='#FFFEF8'
@@ -23,15 +22,16 @@ const About = () => {
         </Text>
         <HStack>
             <Image 
+                marginRight={10}
                 borderRadius='100px'
                 boxSize='150px'
                 src={user_image}
                 alt='ユーザー画像'
                 objectFit='cover'
             />
-            <VStack >
-                <Text fontSize='30px'>しろ</Text>
-                <Text fontSize='17px'>@ksr03_dev</Text>
+            <VStack>
+                <Text fontSize='30px' margin={0} >しろ</Text>
+                <Text fontSize='17px' margin={0} >@ksr03_dev</Text>
             </VStack>
         </HStack>
         <Box
@@ -41,6 +41,7 @@ const About = () => {
             marginTop={20}
             marginBottom={40} 
             bg='white'
+            borderRadius='20px'
         >
             <HStack>
                 <BiSolidUserCircle size='40px' color='#3D454B' />
@@ -50,7 +51,7 @@ const About = () => {
                 情報系学科の学生です。デザインに興味があります。
             </Text>
             <hr/>
-            <HStack>
+            <HStack marginTop={15}>
                 <AiFillTool size='40px' color='#3D454B' />
                 <Text fontWeight='bold'>使用できるスキル</Text>
             </HStack>
