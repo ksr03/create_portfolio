@@ -1,15 +1,17 @@
 import React from 'react'
 import '../App.css';
 import Header from '../components/Header';
-import Introduction from '../components/Introduction';
+import Top from '../components/Top';
+import About from '../components/About';
 import { VStack } from '@chakra-ui/react';
 
 const Home = () => {
   return (
     <div className="App">
       <Header />
-      <VStack>
-        <Introduction />
+      <VStack justify='center' spacing={0}>
+        <Top />
+        <About />
       </VStack>
     </div>
   )
