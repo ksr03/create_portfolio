@@ -23,7 +23,7 @@ const DevPart = (props: Props) => {
             h='110px'
             roundedTop='10px'
             alt='開発物イメージ'
-            src={props.image}
+            src={"dev/" + props.image}
             objectFit='cover'
         />
         <Text margin={0} fontSize='20px' fontWeight='bold'>

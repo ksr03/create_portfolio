@@ -1,8 +1,23 @@
 import React from 'react'
 import DevPart from './DevPart'
 import { VStack, Wrap, WrapItem, Text, Box } from '@chakra-ui/layout'
+import developments from '../developments.json'
+
+type dev_type = {
+  image: string
+  title: string
+  detail: string
+}
 
 const Developments = () => {
+  const DevList:any = developments.map(( development: dev_type, index: number )=>{
+    return (
+      <WrapItem key={index}>
+          <DevPart image={development.image} title={development.title} detail={development.detail} />
+      </WrapItem>
+    )
+  })
+
   return (
     <VStack 
       w='80%' 
@@ -11,20 +26,28 @@ const Developments = () => {
       paddingBottom={40}
     >
         <Text 
+          marginBottom={3}
             fontSize='30px' 
             fontWeight='bold' 
             color='#3D454B'
         >
             Developments
         </Text>
+        <Text 
+          margin={0} 
+          paddingY={5} 
+          paddingX={10} 
+          rounded='10px' 
+          bg='white'
+        >
+          今までに作成した開発物です。
+        </Text>
         <Box 
           w='90%'
           marginX={15}
         >
           <Wrap spacing={4} justify='center'>
-            <WrapItem>
-              <DevPart image='dev1.png' title='abc' detail='aaaaaaaaaa' />
-            </WrapItem>
+            {DevList}
           </Wrap>
         </Box>
     </VStack>

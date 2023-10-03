@@ -47,7 +47,7 @@ const About = () => {
                 <Text fontWeight='bold'>私について</Text>
             </HStack>
             <Text lineHeight={2} marginLeft={20}>
-                情報系学科の学生です。デザインに興味があります。
+                情報系学科の学生です。UIやデザインに興味があります。
             </Text>
             <hr/>
             <HStack marginTop={15}>
