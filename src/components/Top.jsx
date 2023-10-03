@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Center, Text, Image } from '@chakra-ui/react'
+import { Center, Text, Image } from '@chakra-ui/react'
 import image from '../images/image.png'
 
 const Top = () => {
