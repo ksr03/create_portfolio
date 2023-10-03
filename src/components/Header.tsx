@@ -3,9 +3,6 @@ import { Text, HStack, Flex, Spacer, Link } from '@chakra-ui/react';
 import { FaGithubSquare } from 'react-icons/fa'
 import { FaSquareXTwitter } from 'react-icons/fa6'
 
-
-
-
 const Header = () => {
 
         // icon1
@@ -47,7 +44,7 @@ const Header = () => {
             </Link>
             <Spacer/>
             <HStack spacing="15px" marginRight="20px">
-                <Link href='https://twitter.com/shirokichi_cr' rounded="10px">
+                <Link href='https://twitter.com/ksr03_dev' rounded="10px">
                     <FaSquareXTwitter 
                         size="45px" 
                         onMouseEnter={handleMouseEnter1}
