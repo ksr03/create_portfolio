@@ -1,5 +1,7 @@
 [{
         "image": "dev1.png",
         "title": "LONG FLIGHT",
-        "detail": "Processingで作ったシューティングゲームです。"
+        "detail": "敵を避けたり撃ったりしてスコアを稼ぐゲームです。",
+        "date": "2022年1月",
+        "skills": "Processing"
 }]
