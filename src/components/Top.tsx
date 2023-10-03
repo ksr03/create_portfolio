@@ -1,12 +1,11 @@
 import React from 'react'
 import { Center, Text, Image } from '@chakra-ui/react'
-import image from '../images/image.png'
 
 const Top = () => {
   return (
     <Center w='100%'>
         <Image 
-            src={image}
+            src='top_image.png'
             alt='イメージ画像'
             w='80%'
             maxWidth='1000px'

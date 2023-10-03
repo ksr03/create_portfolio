@@ -3,7 +3,6 @@ import { VStack, HStack, Text, Box } from '@chakra-ui/layout'
 import { Image } from '@chakra-ui/image'
 import { BiSolidUserCircle } from 'react-icons/bi'
 import { AiFillTool } from 'react-icons/ai'
-import user_image from '../images/user_image.jpg'
 
 const About = () => {
   return (
@@ -25,7 +24,7 @@ const About = () => {
                 marginRight={10}
                 borderRadius='100px'
                 boxSize='150px'
-                src={user_image}
+                src='user_image.jpg'
                 alt='ユーザー画像'
                 objectFit='cover'
             />

@@ -20,21 +20,11 @@ const Developments = () => {
         <Box 
           w='90%'
           marginX={15}
-          bg='gray'
         >
           <Wrap spacing={4} justify='center'>
             <WrapItem>
-          <DevPart />
-          </WrapItem>
-          <WrapItem>
-          <DevPart />
-          </WrapItem>
-          <WrapItem>
-          <DevPart />
-          </WrapItem>
-          <WrapItem>
-          <DevPart />
-          </WrapItem>
+              <DevPart image='dev1.png' title='abc' detail='aaaaaaaaaa' />
+            </WrapItem>
           </Wrap>
         </Box>
     </VStack>
