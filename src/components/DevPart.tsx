@@ -8,12 +8,14 @@ import Modal from './Modal'
 type Props = {
     image: string
     title: string
-    detail: string
+    introduction: string
     date: string
     skills: string
+    detail: string
+    focus: string
 }
 
-const DevPart = (props: Props) => {
+const DevPart = ({image, title, introduction, date, skills, detail, focus}: Props) => {
     const [show, setShow] = useState(false)
     return (
     <>
@@ -34,7 +36,7 @@ const DevPart = (props: Props) => {
                 h='110px'
                 roundedTop='10px'
                 alt='開発物イメージ'
-                src={"dev/" + props.image}
+                src={"dev/" + image}
                 objectFit='cover'
             />
             <Text 
@@ -45,10 +47,10 @@ const DevPart = (props: Props) => {
                 fontSize='10px'
                 lineHeight='3px'
             >
-                {props.date}
+                {date}
             </Text>
             <Text margin={0} h='30px' fontSize='20px' fontWeight='bold'>
-                {props.title}
+                {title}
             </Text>
             <Text 
                 margin={0} 
@@ -59,14 +61,22 @@ const DevPart = (props: Props) => {
                 wordBreak='break-all'
                 overflow='hidden'
             >
-                {props.detail}
+                {introduction}
             </Text>
             <HStack marginLeft='20px' marginTop='3px' w='100%' h='20px' alignItems='start'>
                 <FaHashtag size='15px' color='#A69A7D'/>
-                <Text margin={0} w='100%' lineHeight='15px' color='#A69A7D'>{props.skills}</Text>
+                <Text margin={0} w='100%' lineHeight='15px' color='#A69A7D'>{skills}</Text>
             </HStack>
         </VStack>
-        <Modal show={show} setShow={setShow}/>
+        <Modal 
+            show={show} 
+            setShow={setShow} 
+            image={image}
+            title={title}
+            skills={skills}
+            detail={detail}
+            focus={focus}
+        />
     </>
     )
 }

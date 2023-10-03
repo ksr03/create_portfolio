@@ -1,13 +1,18 @@
 import React from 'react'
 import { HStack, VStack, Box, Text, Spacer } from '@chakra-ui/layout'
-import { AiOutlineCloseCircle } from 'react-icons/ai'
+import { Image } from '@chakra-ui/image'
 
 type Props = {
     show: boolean
     setShow: any
+    image: string
+    title: string
+    skills: string
+    detail: string
+    focus: string
 }
 
-const Modal = ({show, setShow}: Props) => {
+const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
     return (
         <>
             {show ? 
@@ -29,22 +34,34 @@ const Modal = ({show, setShow}: Props) => {
                             w='90%' 
                             h='600px' 
                             maxWidth='600px' 
+                            rounded='20px'
                             onClick={(e) => e.stopPropagation()}
                         >
-                            <HStack w='100%' >
-                                <Spacer />
-                                <Box 
-                                    marginTop={5} 
-                                    marginRight={5} 
-                                    w='60px' 
-                                    h='60px'
-                                    rounded='10px'
-                                    transition='.3s'
-                                    _hover={{ bg: "#CCCCCC" }} 
-                                    onClick={() => setShow(false)}
-                                >
-                                    <AiOutlineCloseCircle size='60px' color='#3D454B' />
-                                </Box>
+                           <Image 
+                                w='100%' 
+                                h='200px' 
+                                alt='開発物イメージ' 
+                                src={'dev/'+image} 
+                                objectFit='cover'
+                                roundedTop='20px'
+                            />
+                            <HStack marginY={5} h='50px'>
+                                <Text marginRight='20px' fontSize='20px'>作品名:</Text>
+                                <Text fontSize='35px'>{title}</Text>
+                            </HStack>
+                            <HStack h='80px'>
+                                <Text marginY={0} marginLeft='30px' w='20%'>概要:</Text>
+                                <Text marginY={0} marginRight='30px' w='80%'>{detail}</Text>
+                            </HStack>
+                            <hr style={{width: '90%'}}/>
+                            <HStack h='120px'>
+                                <Text marginY={0} marginLeft='30px' w='20%'>こだわり:</Text>
+                                <Text marginY={0} marginRight='30px' w='80%'>{focus}</Text>
+                            </HStack>
+                            <hr style={{width: '90%'}}/>
+                            <HStack h='30px' w='100%'>
+                                <Text marginY={0} marginLeft='30px' w='20%' >使用技術:</Text>
+                                <Text marginY={0} marginRight='30px' w='80%'>{skills}</Text>
                             </HStack>
                         </VStack>
                     </Box>
