@@ -3,7 +3,6 @@ import { VStack, HStack, Text, Box } from '@chakra-ui/layout'
 import { Image } from '@chakra-ui/image'
 import { BiSolidUserCircle } from 'react-icons/bi'
 import { AiFillTool } from 'react-icons/ai'
-import user_image from '../images/user_image.jpg'
 
 const About = () => {
   return (
@@ -25,7 +24,7 @@ const About = () => {
                 marginRight={10}
                 borderRadius='100px'
                 boxSize='150px'
-                src={user_image}
+                src='user_image.jpg'
                 alt='ユーザー画像'
                 objectFit='cover'
             />
@@ -48,7 +47,7 @@ const About = () => {
                 <Text fontWeight='bold'>私について</Text>
             </HStack>
             <Text lineHeight={2} marginLeft={20}>
-                情報系学科の学生です。デザインに興味があります。
+                情報系学科の学生です。UIやデザインに興味があります。
             </Text>
             <hr/>
             <HStack marginTop={15}>
