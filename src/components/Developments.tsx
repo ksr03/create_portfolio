@@ -7,13 +7,21 @@ type dev_type = {
   image: string
   title: string
   detail: string
+  date: string
+  skills: string
 }
 
 const Developments = () => {
   const DevList:any = developments.map(( development: dev_type, index: number )=>{
     return (
       <WrapItem key={index}>
-          <DevPart image={development.image} title={development.title} detail={development.detail} />
+          <DevPart 
+            image={development.image} 
+            title={development.title} 
+            detail={development.detail}
+            date={development.date} 
+            skills={development.skills}
+          />
       </WrapItem>
     )
   })
