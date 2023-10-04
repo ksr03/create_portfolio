@@ -36,7 +36,7 @@ const DevPart = ({image, title, introduction, date, skills, detail, focus}: Prop
                 h='110px'
                 roundedTop='10px'
                 alt='開発物イメージ'
-                src={"dev/" + image}
+                src={"dev/" + image + ".png"}
                 objectFit='cover'
             />
             <Text 
