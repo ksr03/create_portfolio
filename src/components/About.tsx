@@ -1,5 +1,6 @@
 import React from 'react'
 import AllSkills from './AllSkills'
+import Guide from './Guide'
 import { VStack, HStack, Text, Box } from '@chakra-ui/layout'
 import { Image } from '@chakra-ui/image'
 import { BiSolidUserCircle } from 'react-icons/bi'
@@ -56,6 +57,7 @@ const About = () => {
                 <Text fontWeight='bold'>使用できるスキル</Text>
             </HStack>
             <AllSkills />
+            <Guide />
         </Box>
     </VStack>
   )
