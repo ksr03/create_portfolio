@@ -47,7 +47,7 @@ const About = () => {
                 <Text fontWeight='bold'>私について</Text>
             </HStack>
             <Text lineHeight={2} marginLeft={20}>
-                情報系学科の学生です。UIやデザインに興味があります。
+                情報系学科の大学生です。UIやデザインに興味があります。バックエンド・フロントエンド共に学習中です。
             </Text>
             <hr/>
             <HStack marginTop={15}>
@@ -56,8 +56,7 @@ const About = () => {
             </HStack>
             <Text lineHeight={2} marginLeft={20}>
                 学校で学習したもの → C/Java/HTML/CSS/PHP<br/>
-                開発で使用したもの → Javascript/React/Python/MySQL<br/>
-                バックエンド・フロントエンド共に学習中です。
+                開発で使用したもの → Javascript/React/Python/MySQL
             </Text>
         </Box>
     </VStack>

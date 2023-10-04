@@ -23,8 +23,7 @@ const Top = () => {
                 fontWeight='hairline' 
                 textAlign='left'
             >
-                ものづくりが好きな学生です。<br/>
-                ゆるく開発しています。
+                開発を学んでいる学生です。
             </Text>
     </Center>
   )
