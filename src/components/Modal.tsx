@@ -1,7 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
-import { HStack, VStack, Box, Text } from '@chakra-ui/layout'
+import { HStack, VStack, Box, Text, Spacer, Center } from '@chakra-ui/layout'
 import { Image } from '@chakra-ui/image'
+import { AiOutlineClose } from 'react-icons/ai'
 
 type Props = {
     show: boolean
@@ -61,6 +62,26 @@ const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
                                 objectFit='cover'
                                 roundedTop='20px'
                             />
+                            <HStack
+                                w='100%'
+                                position='absolute'
+                            >
+                                <Spacer />
+                                <Box 
+                                    margin={5}
+                                    w='50px' 
+                                    h='50px' 
+                                    rounded='25px' 
+                                    mixBlendMode='difference'
+                                    bg='rgba(255, 255, 255, 0.3)' 
+                                    transition='.15s'
+                                    _hover={{ bg: "rgba(255, 255, 255, 0.5)" }}
+                                >
+                                    <Center h='100%'>
+                                    <AiOutlineClose size='35px' onClick={() => setModalState(2)} />
+                                    </Center>
+                                </Box>
+                            </HStack>
                             <HStack marginY={5} h='50px'>
                                 <Text marginRight='20px' fontSize='20px'>作品名:</Text>
                                 <Text fontSize='35px'>{title}</Text>
