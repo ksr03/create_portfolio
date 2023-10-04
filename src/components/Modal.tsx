@@ -1,5 +1,6 @@
 import React from 'react'
-import { HStack, VStack, Box, Text, Spacer } from '@chakra-ui/layout'
+import { useState } from 'react'
+import { HStack, VStack, Box, Text } from '@chakra-ui/layout'
 import { Image } from '@chakra-ui/image'
 
 type Props = {
@@ -13,6 +14,13 @@ type Props = {
 }
 
 const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
+    const [onViewing, setOnViewing] = useState(false)
+    if (show){
+        {setTimeout(() => { setOnViewing(true) }, 1) }       
+    } else {
+        {setTimeout(() => { setOnViewing(false) }, 1) }
+    }
+
     return (
         <>
             {show ? 
@@ -23,10 +31,12 @@ const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
                         left={0}
                         w='100%'
                         h='100%'
-                        bg='rgba(0, 0, 0, 0.5)'
+                        bg={onViewing ? 'rgba(0, 0, 0, 0.5)' : 'rgba(0, 0, 0, 0)'}
+                        opacity={onViewing ? '1' : '0'}
                         display='flex'
                         alignItems='center'
                         justifyContent='center'
+                        transition='.2s'
                         onClick={() => setShow(false)}
                     >
                         <VStack
@@ -35,6 +45,8 @@ const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
                             h='600px' 
                             maxWidth='600px' 
                             rounded='20px'
+                            transform={onViewing ? 'scale(1)' : 'scale(.9)'}
+                            transition='.2s'
                             onClick={(e) => e.stopPropagation()}
                         >
                            <Image 
