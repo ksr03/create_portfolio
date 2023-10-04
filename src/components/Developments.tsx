@@ -35,7 +35,7 @@ const Developments = () => {
       w='80%' 
       bg='#FFDFD4' 
       maxWidth='1000px' 
-      paddingBottom={40}
+      paddingBottom={20}
     >
         <Text 
           marginBottom={3}
