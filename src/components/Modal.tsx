@@ -31,7 +31,6 @@ const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
                         left={0}
                         w='100%'
                         h='100%'
-                        // bg='rgba(0, 0, 0, 0.5)'
                         bg={onViewing ? 'rgba(0, 0, 0, 0.5)' : 'rgba(0, 0, 0, 0)'}
                         opacity={onViewing ? '1' : '0'}
                         display='flex'
