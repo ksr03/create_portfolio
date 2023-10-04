@@ -1,4 +1,5 @@
 import React from 'react'
+import AllSkills from './AllSkills'
 import { VStack, HStack, Text, Box } from '@chakra-ui/layout'
 import { Image } from '@chakra-ui/image'
 import { BiSolidUserCircle } from 'react-icons/bi'
@@ -54,10 +55,7 @@ const About = () => {
                 <AiFillTool size='40px' color='#3D454B' />
                 <Text fontWeight='bold'>使用できるスキル</Text>
             </HStack>
-            <Text lineHeight={2} marginLeft={20}>
-                学校で学習したもの → C/Java/HTML/CSS/PHP<br/>
-                開発で使用したもの → Javascript/React/Python/MySQL
-            </Text>
+            <AllSkills />
         </Box>
     </VStack>
   )

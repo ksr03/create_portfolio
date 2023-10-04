@@ -1,8 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
-import { HStack, VStack, Box, Text, Spacer } from '@chakra-ui/layout'
+import { HStack, VStack, Box, Text } from '@chakra-ui/layout'
 import { Image } from '@chakra-ui/image'
-import { scale } from 'style-value-types'
 
 type Props = {
     show: boolean
