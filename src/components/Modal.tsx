@@ -14,11 +14,15 @@ type Props = {
 }
 
 const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
-    const [onViewing, setOnViewing] = useState(false)
-    if (show){
-        {setTimeout(() => { setOnViewing(true) }, 1) }       
-    } else {
-        {setTimeout(() => { setOnViewing(false) }, 1) }
+    const [modalState, setModalState] = useState(0)
+    if (show && modalState === 0){
+        setTimeout(() => { setModalState(1) }, 1)        
+    }
+    if (modalState === 2){
+        setTimeout(() => { 
+            setShow(false) 
+            setModalState(0) 
+        }, 200) 
     }
 
     return (
@@ -31,13 +35,13 @@ const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
                         left={0}
                         w='100%'
                         h='100%'
-                        bg={onViewing ? 'rgba(0, 0, 0, 0.5)' : 'rgba(0, 0, 0, 0)'}
-                        opacity={onViewing ? '1' : '0'}
+                        bg={modalState === 1 ? 'rgba(0, 0, 0, 0.5)' : 'rgba(0, 0, 0, 0)'}
+                        opacity={modalState === 1 ? '1' : '0'}
                         display='flex'
                         alignItems='center'
                         justifyContent='center'
                         transition='.2s'
-                        onClick={() => setShow(false)}
+                        onClick={() => setModalState(2)}
                     >
                         <VStack
                             bg='white' 
@@ -45,7 +49,7 @@ const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
                             h='600px' 
                             maxWidth='600px' 
                             rounded='20px'
-                            transform={onViewing ? 'scale(1)' : 'scale(.9)'}
+                            transform={modalState === 1 ? 'scale(1)' : 'scale(.9)'}
                             transition='.2s'
                             onClick={(e) => e.stopPropagation()}
                         >
