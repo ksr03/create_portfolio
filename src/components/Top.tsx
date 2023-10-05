@@ -13,18 +13,16 @@ const Top = () => {
             objectFit='cover'
             marginY={0}
         />
-            <Text 
-                style={{ 
-                    position: 'absolute',
-                }} 
-                marginTop={50}
-                color='white' 
-                fontSize='23px' 
-                fontWeight='hairline' 
-                textAlign='left'
-            >
-                開発を学んでいる学生です。
-            </Text>
+        <Text 
+            marginTop={50}
+            color='white' 
+            fontSize='23px' 
+            fontWeight='hairline' 
+            textAlign='left'
+            position='absolute'
+        >
+            開発を学んでいる学生です。
+        </Text>
     </Center>
   )
 }
