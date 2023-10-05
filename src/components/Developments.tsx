@@ -14,6 +14,7 @@ type dev_type = {
 }
 
 const Developments = () => {
+  // eslint-disable-next-line
   const DevList:any = developments.map(( {image, title, introduction, date, skills, detail, focus}: dev_type, index: number )=>{
     return (
       <WrapItem key={index}>

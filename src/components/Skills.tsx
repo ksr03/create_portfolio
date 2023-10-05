@@ -14,6 +14,7 @@ type Props = {
 }
 
 const Skills = ({genre_name, skill_list}: Props) => {
+    // eslint-disable-next-line
     const FrontSkills:any = skill_list.map(({name, level}: skill_type, index: number) => {
         return (
             <Skill key={index} name={name} level={level} />
