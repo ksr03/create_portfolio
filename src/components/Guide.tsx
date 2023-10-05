@@ -7,11 +7,11 @@ const Guide = () => {
     <VStack marginTop={15} w='180px' h='50px' alignItems='start' >
         <HStack>
             <FaRegFaceMeh size='17px' color='#6DB633'/>
-            <Text margin={0} h='18px' fontSize='13px' lineHeight='19px'>使用したことがある</Text>
+            <Text h='18px' fontSize='13px' lineHeight='19px'>使用したことがある</Text>
         </HStack>
         <HStack>
             <FaRegFaceLaugh size='17px' color='#3278E1' />
-            <Text margin={0} h='18px' fontSize='13px' lineHeight='19px'>基本的な操作ができる</Text>
+            <Text h='18px' fontSize='13px' lineHeight='19px'>基本的な操作ができる</Text>
         </HStack>
     </VStack>
   )

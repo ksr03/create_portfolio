@@ -31,7 +31,6 @@ const DevPart = ({image, title, introduction, date, skills, detail, focus}: Prop
             onClick={() => setShow(true)}
         >
             <Image
-                margin={0}
                 w='100%'
                 h='110px'
                 roundedTop='10px'
@@ -41,7 +40,7 @@ const DevPart = ({image, title, introduction, date, skills, detail, focus}: Prop
             />
             <Text 
                 marginLeft='8px' 
-                marginY={0} w='100%'
+                w='100%'
                 h='5px' 
                 textAlign='left'
                 fontSize='10px'
@@ -49,11 +48,10 @@ const DevPart = ({image, title, introduction, date, skills, detail, focus}: Prop
             >
                 {date}
             </Text>
-            <Text margin={0} h='30px' fontSize='20px' fontWeight='bold'>
+            <Text h='30px' fontSize='20px' fontWeight='bold'>
                 {title}
             </Text>
             <Text 
-                margin={0} 
                 fontSize='15px' 
                 w='90%' 
                 h='55px'
@@ -65,7 +63,7 @@ const DevPart = ({image, title, introduction, date, skills, detail, focus}: Prop
             </Text>
             <HStack marginLeft='20px' marginTop='3px' w='100%' h='20px' alignItems='start'>
                 <FaHashtag size='15px' color='#A69A7D'/>
-                <Text margin={0} w='100%' lineHeight='15px' color='#A69A7D'>{skills}</Text>
+                <Text w='100%' lineHeight='15px' color='#A69A7D'>{skills}</Text>
             </HStack>
         </VStack>
         <Modal 

@@ -35,21 +35,21 @@ const Developments = () => {
       w='80%' 
       bg='#FFDFD4' 
       maxWidth='1000px' 
-      paddingBottom={20}
+      paddingBottom='30px'
     >
         <Text 
-          marginBottom={3}
-            fontSize='30px' 
-            fontWeight='bold' 
-            color='#3D454B'
+          marginTop='15px'
+          marginBottom='10px'
+          fontSize='30px' 
+          fontWeight='bold' 
+          color='#3D454B'
         >
             Developments
         </Text>
         <Text 
-          marginY={0}
-          marginX={5} 
-          paddingY={5} 
-          paddingX={10} 
+          marginBottom='10px'
+          paddingY='8px'
+          paddingX='15px'
           rounded='10px' 
           bg='white'
         >

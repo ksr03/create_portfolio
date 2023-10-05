@@ -65,21 +65,20 @@ const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
                             transition='.2s'
                             onClick={(e) => e.stopPropagation()}
                         >
-                            {loading ?
+                            {loading &&
                                 <Center w='100%' h='200px'>
                                     <Spinner size='xl'/>
                                 </Center>  
-                                :
-                                <Image 
-                                    w='100%' 
-                                    h='200px' 
-                                    alt='開発物イメージ' 
-                                    src={'dev/'+image+".gif"} 
-                                    objectFit='cover'
-                                    roundedTop='20px'
-                                    onLoad={handleLoad}
-                                />
                             }
+                            <Image 
+                                w='100%' 
+                                h='200px' 
+                                alt='開発物イメージ' 
+                                src={'dev/'+image+".gif"} 
+                                objectFit='cover'
+                                roundedTop='20px'
+                                onLoad={handleLoad}
+                            />
                             <HStack
                                 w='100%'
                                 position='absolute'
@@ -105,18 +104,18 @@ const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
                                 <Text fontSize='35px'>{title}</Text>
                             </HStack>
                             <HStack h='80px'>
-                                <Text marginY={0} marginLeft='30px' w='20%'>概要:</Text>
-                                <Text marginY={0} marginRight='30px' w='80%'>{detail}</Text>
+                                <Text marginLeft='30px' w='20%'>概要:</Text>
+                                <Text marginRight='30px' w='80%'>{detail}</Text>
                             </HStack>
                             <hr style={{width: '90%'}}/>
                             <HStack h='120px'>
-                                <Text marginY={0} marginLeft='30px' w='20%'>こだわり:</Text>
-                                <Text marginY={0} marginRight='30px' w='80%'>{focus}</Text>
+                                <Text marginLeft='30px' w='20%'>こだわり:</Text>
+                                <Text marginRight='30px' w='80%'>{focus}</Text>
                             </HStack>
                             <hr style={{width: '90%'}}/>
                             <HStack h='30px' w='100%'>
-                                <Text marginY={0} marginLeft='30px' w='20%' >使用技術:</Text>
-                                <Text marginY={0} marginRight='30px' w='80%'>{skills}</Text>
+                                <Text marginLeft='30px' w='20%' >使用技術:</Text>
+                                <Text marginRight='30px' w='80%'>{skills}</Text>
                             </HStack>
                         </VStack>
                     </Box>
