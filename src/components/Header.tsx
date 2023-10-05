@@ -33,7 +33,7 @@ const Header = () => {
             backdropBlur='5px'
             filter='auto'
             brightness='110%'
-            zIndex='9999'
+            zIndex='9000'
             position='fixed'
             top='0'
         >

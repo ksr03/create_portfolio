@@ -42,6 +42,7 @@ const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
                         alignItems='center'
                         justifyContent='center'
                         transition='.2s'
+                        zIndex='9999'
                         onClick={() => setModalState(2)}
                     >
                         <VStack
