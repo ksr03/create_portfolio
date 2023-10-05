@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { HStack, VStack, Box, Text, Spacer, Center } from '@chakra-ui/layout'
 import { Image } from '@chakra-ui/image'
+import { Spinner } from '@chakra-ui/spinner'
 import { AiOutlineClose } from 'react-icons/ai'
 
 type Props = {
@@ -15,6 +16,8 @@ type Props = {
 }
 
 const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
+    
+    //モーダルの状態
     const [modalState, setModalState] = useState(0)
     if (show && modalState === 0){
         setTimeout(() => { setModalState(1) }, 1)        
@@ -25,7 +28,12 @@ const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
             setModalState(0) 
         }, 200) 
     }
-    console.log(typeof(setShow))
+
+    //gifの読み込み状態
+    const [loading, setLoading] = useState(true)
+    const handleLoad = () => {
+        setLoading(false)
+    }
 
     return (
         <>
@@ -57,14 +65,21 @@ const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
                             transition='.2s'
                             onClick={(e) => e.stopPropagation()}
                         >
-                           <Image 
-                                w='100%' 
-                                h='200px' 
-                                alt='開発物イメージ' 
-                                src={'dev/'+image+".gif"} 
-                                objectFit='cover'
-                                roundedTop='20px'
-                            />
+                            {loading ?
+                                <Center w='100%' h='200px'>
+                                    <Spinner size='xl'/>
+                                </Center>  
+                                :
+                                <Image 
+                                    w='100%' 
+                                    h='200px' 
+                                    alt='開発物イメージ' 
+                                    src={'dev/'+image+".gif"} 
+                                    objectFit='cover'
+                                    roundedTop='20px'
+                                    onLoad={handleLoad}
+                                />
+                            }
                             <HStack
                                 w='100%'
                                 position='absolute'
