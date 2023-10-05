@@ -6,7 +6,7 @@ import { AiOutlineClose } from 'react-icons/ai'
 
 type Props = {
     show: boolean
-    setShow: any
+    setShow: React.Dispatch<React.SetStateAction<boolean>>
     image: string
     title: string
     skills: string
@@ -25,6 +25,7 @@ const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
             setModalState(0) 
         }, 200) 
     }
+    console.log(typeof(setShow))
 
     return (
         <>
@@ -48,8 +49,9 @@ const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
                         <VStack
                             bg='white' 
                             w='90%' 
-                            h='600px' 
-                            maxWidth='600px' 
+                            h='90%' 
+                            maxWidth='600px'
+                            maxHeight='600px' 
                             rounded='20px'
                             transform={modalState === 1 ? 'scale(1)' : 'scale(.9)'}
                             transition='.2s'
