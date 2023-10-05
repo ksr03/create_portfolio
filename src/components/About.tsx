@@ -15,6 +15,7 @@ const About = () => {
         spacing={0}
     >
         <Text 
+            marginY='20px'
             fontSize='30px' 
             fontWeight='bold' 
             color='#3D454B'
@@ -31,28 +32,28 @@ const About = () => {
                 objectFit='cover'
             />
             <VStack>
-                <Text fontSize='30px' margin={0} >しろ</Text>
-                <Text fontSize='17px' margin={0} >@ksr03_dev</Text>
+                <Text fontSize='30px'>しろ</Text>
+                <Text fontSize='17px'>@ksr03_dev</Text>
             </VStack>
         </HStack>
         <Box
             w='60%' 
-            paddingX={30}
-            paddingY={20}
-            marginTop={20}
-            marginBottom={40} 
+            paddingX='30px'
+            paddingY='20px'
+            marginTop='30px'
+            marginBottom='30px' 
             bg='white'
             borderRadius='20px'
         >
-            <HStack>
+            <HStack marginBottom='10px'>
                 <BiSolidUserCircle size='40px' color='#3D454B' />
                 <Text fontWeight='bold'>私について</Text>
             </HStack>
-            <Text lineHeight={2} marginLeft={20}>
+            <Text marginX='auto' paddingBottom='20px' w='90%' lineHeight='25px' >
                 情報系学科の大学生です。UIやデザインに興味があります。バックエンド・フロントエンド共に学習中です。
             </Text>
             <hr/>
-            <HStack marginTop={15}>
+            <HStack marginTop='15px' marginBottom='15px'>
                 <AiFillTool size='40px' color='#3D454B' />
                 <Text fontWeight='bold'>使用できるスキル</Text>
             </HStack>

@@ -14,6 +14,7 @@ type Props = {
 }
 
 const Skills = ({genre_name, skill_list}: Props) => {
+    // eslint-disable-next-line
     const FrontSkills:any = skill_list.map(({name, level}: skill_type, index: number) => {
         return (
             <Skill key={index} name={name} level={level} />
@@ -22,13 +23,14 @@ const Skills = ({genre_name, skill_list}: Props) => {
 
   return (
     <>
-        <HStack marginY='10px' marginLeft='10px' h='20px'>
+        <HStack marginTop='15px' marginBottom='10px' marginLeft='10px' h='20px'>
             <RiCircleFill color='#3D454B' size='10px' />
             <Text fontWeight='bold'>{genre_name}</Text>
         </HStack>
-        <Box w='100%' display='flex' flexWrap='wrap' >
+        <Box paddingBottom='10px' w='100%' display='flex' flexWrap='wrap' >
             {FrontSkills}
         </Box>
+        <hr color='#EEEEEE' style={{ width: '95%' }}/>
     </>
   )
 }
