@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { HStack, VStack, Box, Text, Spacer, Center } from '@chakra-ui/layout'
 import { Image } from '@chakra-ui/image'
-import { Spinner } from '@chakra-ui/spinner'
+import { CloseIcon } from '@chakra-ui/icons'
 import { AiOutlineClose } from 'react-icons/ai'
 
 type Props = {
@@ -29,12 +29,6 @@ const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
         }, 200) 
     }
 
-    //gifの読み込み状態
-    const [loading, setLoading] = useState(true)
-    const handleLoad = () => {
-        setLoading(false)
-    }
-
     return (
         <>
             {show ? 
@@ -45,7 +39,7 @@ const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
                         left={0}
                         w='100%'
                         h='100%'
-                        bg={modalState === 1 ? 'rgba(0, 0, 0, 0.5)' : 'rgba(0, 0, 0, 0)'}
+                        bg={modalState === 1 ? 'rgba(0, 0, 0, .5)' : 'rgba(0, 0, 0, 0)'}
                         opacity={modalState === 1 ? '1' : '0'}
                         display='flex'
                         alignItems='center'
@@ -65,11 +59,6 @@ const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
                             transition='.2s'
                             onClick={(e) => e.stopPropagation()}
                         >
-                            {loading &&
-                                <Center w='100%' h='200px'>
-                                    <Spinner size='xl'/>
-                                </Center>  
-                            }
                             <Image 
                                 w='100%' 
                                 h='200px' 
@@ -77,27 +66,22 @@ const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
                                 src={'dev/'+image+".gif"} 
                                 objectFit='cover'
                                 roundedTop='20px'
-                                onLoad={handleLoad}
                             />
                             <HStack
                                 w='100%'
                                 position='absolute'
                             >
                                 <Spacer />
-                                <Box 
-                                    margin={5}
-                                    w='50px' 
-                                    h='50px' 
-                                    rounded='25px' 
+                                <CloseIcon 
+                                    marginTop='10px'
+                                    marginRight='10px'
+                                    boxSize='30px' 
+                                    color='rgba(255, 255, 255, .3)'
                                     mixBlendMode='difference'
-                                    bg='rgba(255, 255, 255, 0.3)' 
-                                    transition='.15s'
-                                    _hover={{ bg: "rgba(255, 255, 255, 0.5)" }}
-                                >
-                                    <Center h='100%'>
-                                    <AiOutlineClose size='35px' onClick={() => setModalState(2)} />
-                                    </Center>
-                                </Box>
+                                    transition='.15s' 
+                                    _hover={{ color: "rgba(255, 255, 255, .5)" }}
+                                    onClick={()=>setModalState(2)} 
+                                />
                             </HStack>
                             <HStack marginY={5} h='50px'>
                                 <Text marginRight='20px' fontSize='20px'>作品名:</Text>
