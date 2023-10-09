@@ -37,6 +37,7 @@ const Developments = () => {
       bg='#FFDFD4' 
       maxWidth='1000px' 
       paddingBottom='30px'
+      zIndex='5'
     >
         <Text 
           marginTop='15px'

@@ -50,6 +50,7 @@ const Header = () => {
                         onMouseEnter={handleMouseEnter1}
                         onMouseLeave={handleMouseLeave1}
                         color={iconColor1}
+                        style={{transition: '.2s'}}
                     />
                 </Link>
                 <Link href='https://github.com/ksr03' rounded="10px">
@@ -58,6 +59,7 @@ const Header = () => {
                         onMouseEnter={handleMouseEnter2}
                         onMouseLeave={handleMouseLeave2}
                         color={iconColor2}
+                        style={{transition: '.2s'}}
                     />
                 </Link>
             </HStack>

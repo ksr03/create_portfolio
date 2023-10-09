@@ -1,0 +1,15 @@
+.load-blink-dot {
+    animation: blink-dot 1.2s linear infinite;
+    opacity: 0;
+}
+
+@keyframes blink-dot {
+    0% {
+        opacity: 1;
+        fill: rgb(105, 116, 63);
+    }
+    100% {
+        opacity: 1;
+        fill: rgb(197, 197, 197);
+    }
+}
