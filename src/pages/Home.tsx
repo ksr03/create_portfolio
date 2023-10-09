@@ -9,12 +9,13 @@ import { VStack } from '@chakra-ui/react';
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true)
+  addEventListener('load', () => {setIsLoading(false)})
   return (
     <div className="App">
-      {isLoading && <Loading />}
+      <Loading isLoading={isLoading} />
       <Header />
       <VStack marginBottom={50} justify='center' spacing={0}>
-        <Top setIsLoading={setIsLoading} />
+        <Top />
         <About />
         <Developments />
       </VStack>

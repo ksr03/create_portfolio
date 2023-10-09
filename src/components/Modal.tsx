@@ -1,9 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
-import { HStack, VStack, Box, Text, Spacer, Center } from '@chakra-ui/layout'
-import { Image } from '@chakra-ui/image'
+import { HStack, VStack, Box, Text, Spacer } from '@chakra-ui/layout'
 import { CloseIcon } from '@chakra-ui/icons'
-import { AiOutlineClose } from 'react-icons/ai'
 
 type Props = {
     show: boolean

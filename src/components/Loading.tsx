@@ -1,6 +1,10 @@
 import React from 'react'
 import { Box, Text } from '@chakra-ui/react'
 
+type Props = {
+    isLoading: boolean
+}
+
 const blinkingTextStyles = {
     animation: "blink 2s infinite",
     "@keyframes blink": {
@@ -16,7 +20,7 @@ const blinkingTextStyles = {
     },
   };
 
-const Loading = () => {
+const Loading = ({isLoading}:Props) => {
   return (
     <div>
         <Box   
@@ -26,10 +30,12 @@ const Loading = () => {
             w='100%'
             h='100%'
             bg='white'
+            opacity={isLoading ? 1 : 0}
             display='flex'
             alignItems='center'
             justifyContent='center'
-            zIndex='9999'
+            zIndex={isLoading ? '9999' : '0'}
+            transition='.2s'
         >
             <Text fontSize='30px' sx={blinkingTextStyles}>Loading</Text>
         </Box>
