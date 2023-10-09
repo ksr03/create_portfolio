@@ -1,7 +1,11 @@
 import React from 'react'
 import { Center, Text, Image } from '@chakra-ui/react'
 
-const Top = () => {
+type Props = {
+  setIsLoading: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+const Top = ({setIsLoading}:Props) => {
   return (
     <Center w='100%'>
         <Image 
@@ -12,6 +16,7 @@ const Top = () => {
             h='500px'
             objectFit='cover'
             marginY={0}
+            onLoad={() => {setIsLoading(false)}}
         />
         <Text 
             marginTop={50}

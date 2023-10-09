@@ -2,7 +2,7 @@ import React from 'react'
 
 const NoMatch = () => {
   return (
-    <div>このページは存在しません。</div>
+    <div className='App'>このページは存在しません。</div>
   )
 }
 
