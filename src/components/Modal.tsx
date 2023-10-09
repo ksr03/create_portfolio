@@ -59,14 +59,18 @@ const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
                             transition='.2s'
                             onClick={(e) => e.stopPropagation()}
                         >
-                            <Image 
+                            <Box
                                 w='100%' 
                                 h='200px' 
-                                alt='開発物イメージ' 
-                                src={'dev/'+image+".gif"} 
-                                objectFit='cover'
                                 roundedTop='20px'
-                            />
+                                overflow='hidden'
+                            >
+                                <video 
+                                    src={'dev/'+image+".mp4"} 
+                                    autoPlay
+                                    loop
+                                />
+                            </Box>
                             <HStack
                                 w='100%'
                                 position='absolute'
