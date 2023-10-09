@@ -1,4 +1,5 @@
 import React from 'react'
+import './Loading.css'
 import { Box, Text } from '@chakra-ui/react'
 
 type Props = {
@@ -21,6 +22,22 @@ const blinkingTextStyles = {
   };
 
 const Loading = ({isLoading}:Props) => {
+  const Circle = Array.from({length: 12}, (_, index) => {
+    const animationDelay = `${(index/10).toFixed(1)}s`
+    const degree = index * 30
+    return (
+        <circle 
+            key={index} 
+            cx='125px' 
+            cy='75px' 
+            r='10px' 
+            stroke='transparent' 
+            className='load-blink-dot' 
+            style={{animationDelay: animationDelay}} 
+            transform={`rotate(${degree},75,75)`}
+        />
+    )
+})
   return (
     <div>
         <Box   
@@ -29,7 +46,7 @@ const Loading = ({isLoading}:Props) => {
             left={0}
             w='100%'
             h='100%'
-            bg='white'
+            bg='#F3F3F3'
             opacity={isLoading ? 1 : 0}
             display='flex'
             alignItems='center'
@@ -37,7 +54,11 @@ const Loading = ({isLoading}:Props) => {
             zIndex={isLoading ? '9999' : '0'}
             transition='.2s'
         >
-            <Text fontSize='30px' sx={blinkingTextStyles}>Loading</Text>
+          <div id="sample05" className="loading">
+            <svg width="150px" height="150px">
+                {Circle}
+            </svg>
+          </div>
         </Box>
     </div>
   )
