@@ -1,25 +1,10 @@
 import React from 'react'
 import './Loading.css'
-import { Box, Text } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 
 type Props = {
     isLoading: boolean
 }
-
-const blinkingTextStyles = {
-    animation: "blink 2s infinite",
-    "@keyframes blink": {
-      "0%": {
-        opacity: 1,
-      },
-      "50%": {
-        opacity: 0,
-      },
-      "100%": {
-        opacity: 1,
-      },
-    },
-  };
 
 const Loading = ({isLoading}:Props) => {
   const Circle = Array.from({length: 12}, (_, index) => {

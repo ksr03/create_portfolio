@@ -27,6 +27,7 @@ const DevPart = ({image, title, introduction, date, skills, detail, focus}: Prop
             borderRadius='10px'
             cursor='pointer'
             transition='.15s'
+            zIndex='5'
             _hover={{ bg: "#FAFAFA"}}
             onClick={() => setShow(true)}
         >

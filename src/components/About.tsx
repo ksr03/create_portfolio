@@ -1,4 +1,5 @@
 import React from 'react'
+import getWindowSize from './getWindowSize'
 import AllSkills from './AllSkills'
 import Guide from './Guide'
 import { VStack, HStack, Text, Box } from '@chakra-ui/layout'
@@ -7,6 +8,7 @@ import { BiSolidUserCircle } from 'react-icons/bi'
 import { AiFillTool } from 'react-icons/ai'
 
 const About = () => {
+    const w = getWindowSize()[0]
   return (
     <VStack 
         w='80%'
@@ -24,9 +26,9 @@ const About = () => {
         </Text>
         <HStack>
             <Image 
-                marginRight={10}
+                marginRight='20px'
                 borderRadius='100px'
-                boxSize='150px'
+                boxSize='130px'
                 src='https://pbs.twimg.com/profile_images/1698306555345833984/9h3iutCj_400x400.jpg'
                 alt='ユーザー画像'
                 objectFit='cover'
@@ -37,7 +39,7 @@ const About = () => {
             </VStack>
         </HStack>
         <Box
-            w='60%' 
+            w={ w < 1000 ? `${(1-w/1000)*30 + 65}%` : '65%'}
             paddingX='30px'
             paddingY='20px'
             marginTop='30px'
@@ -49,7 +51,7 @@ const About = () => {
                 <BiSolidUserCircle size='40px' color='#3D454B' />
                 <Text fontWeight='bold'>私について</Text>
             </HStack>
-            <Text marginX='auto' paddingBottom='20px' w='90%' lineHeight='25px' >
+            <Text marginX='auto' paddingBottom='20px' w='95%' lineHeight='25px' >
                 情報系学科の大学生です。UIやデザインに興味があります。バックエンド・フロントエンド共に学習中です。
             </Text>
             <hr/>
