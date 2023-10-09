@@ -68,9 +68,13 @@ const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
                                 h='200px' 
                                 roundedTop='20px'
                                 overflow='hidden'
+                                display='flex'
+                                justifyContent='center'
+                                alignItems='center'
                             >
                                 <video 
                                     src={'dev/'+image+".mp4"} 
+                                    style={{transform: 'scale(1.5)'}}
                                     autoPlay
                                     loop
                                 />
