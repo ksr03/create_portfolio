@@ -29,7 +29,7 @@ const About = () => {
                 marginRight='20px'
                 borderRadius='100px'
                 boxSize='130px'
-                src='https://pbs.twimg.com/profile_images/1698306555345833984/9h3iutCj_400x400.jpg'
+                src='user_image.jpg'
                 alt='ユーザー画像'
                 objectFit='cover'
             />
