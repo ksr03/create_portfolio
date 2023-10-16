@@ -5,7 +5,7 @@ const Top = () => {
   return (
     <Center w='100%'>
         <Image 
-            src='top_image.png'
+            src='top_image.jpg'
             alt='イメージ画像'
             w='80%'
             maxWidth='1000px'
@@ -15,11 +15,12 @@ const Top = () => {
         />
         <Text 
             marginTop={50}
-            color='white' 
+            color='black' 
             fontSize='23px' 
             fontWeight='hairline' 
             textAlign='left'
             position='absolute'
+            top='180px'
         >
             開発を学んでいる学生です。
         </Text>
