@@ -20,6 +20,7 @@ const Top = () => {
             fontWeight='hairline' 
             textAlign='left'
             position='absolute'
+            top='180px'
         >
             開発を学んでいる学生です。
         </Text>
