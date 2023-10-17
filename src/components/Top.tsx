@@ -14,15 +14,20 @@ const Top = () => {
             marginY={0}
         />
         <Text 
-            marginTop={50}
-            color='black' 
-            fontSize='23px' 
-            fontWeight='hairline' 
+            paddingX='15px'
+            w='80%'
+            maxWidth='1000px'
+            color='white' 
+            fontSize='30px' 
+            fontWeight='bold' 
             textAlign='left'
             position='absolute'
-            top='180px'
+            top='60px'
         >
-            開発を学んでいる学生です。
+            in the Department of <br/>
+            information Science <br/>
+            and <br/>
+            Engineering
         </Text>
     </Center>
   )
