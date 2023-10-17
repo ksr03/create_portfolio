@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import Header from '../components/Header';
-import Top from '../components/Top';
-import About from '../components/About';
-import Developments from '../components/Developments';
-import Copyright from '../components/Copyright';
-import Loading from '../components/Loading';
+import Header from '@components/Header';
+import Top from '@components/Top';
+import About from '@components/About';
+import Developments from '@components/Developments';
+import Copyright from '@components/Copyright';
+import Loading from '@components/Loading';
 import { VStack } from '@chakra-ui/react';
 
 const Home = () => {
