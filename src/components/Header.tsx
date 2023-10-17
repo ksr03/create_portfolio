@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Text, HStack, Flex, Spacer, Link } from '@chakra-ui/react';
-import { FaGithubSquare } from 'react-icons/fa'
-import { FaSquareXTwitter } from 'react-icons/fa6'
+import { TbBrandGithub } from 'react-icons/tb'
+import { RiTwitterXLine } from 'react-icons/ri'
 
 const Header = () => {
 
@@ -11,7 +11,7 @@ const Header = () => {
           seticonColor1('#111111'); // 色を変更
         };
         const handleMouseLeave1 = () => {
-          seticonColor1('#3D454B'); // 初期色に戻す
+          seticonColor1('#3D3D3D'); // 初期色に戻す
         };
 
         // icon2
@@ -20,7 +20,7 @@ const Header = () => {
           seticonColor2('#111111'); // 色を変更
         };
         const handleMouseLeave2 = () => {
-          seticonColor2('#3D454B'); // 初期色に戻す
+          seticonColor2('#3D3D3D'); // 初期色に戻す
         };
 
   return (
@@ -29,24 +29,24 @@ const Header = () => {
             alignItems='center' 
             h="60px" 
             w='100%'
+            bg='rgba(242, 242, 242, 0.8)'
             backdropFilter='auto' 
             backdropBlur='5px'
             filter='auto'
-            brightness='110%'
             zIndex='9000'
             position='fixed'
             top='0'
         >
             <Link href='/' style={{ textDecoration: 'none' }}>
-                <Text fontSize="25px" fontWeight='bold' marginLeft="20px" color="#3D454B">
+                <Text marginLeft="20px" fontSize="25px" fontWeight='bold' color="#036a80">
                     Portfolio
                 </Text>
             </Link>
             <Spacer/>
             <HStack spacing="15px" marginRight="20px">
                 <Link href='https://twitter.com/ksr03_dev' rounded="10px">
-                    <FaSquareXTwitter 
-                        size="45px" 
+                    <RiTwitterXLine 
+                        size="30px" 
                         onMouseEnter={handleMouseEnter1}
                         onMouseLeave={handleMouseLeave1}
                         color={iconColor1}
@@ -54,8 +54,8 @@ const Header = () => {
                     />
                 </Link>
                 <Link href='https://github.com/ksr03' rounded="10px">
-                    <FaGithubSquare 
-                        size="45px" 
+                    <TbBrandGithub 
+                        size="35px" 
                         onMouseEnter={handleMouseEnter2}
                         onMouseLeave={handleMouseLeave2}
                         color={iconColor2}

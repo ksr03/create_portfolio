@@ -2,7 +2,7 @@ import { extendTheme } from "@chakra-ui/react";
 
 export const theme = extendTheme({
   fonts: {
-    body: 'Noto Sans JP, sans-serif',
+    body: 'Raleway, Noto Sans JP, sans-serif',
     heading: 'Noto Sans JP, sans-serif',
   },
   styles: {
@@ -10,7 +10,7 @@ export const theme = extendTheme({
       body: {
         margin: 0,
         padding: 0,
-        backgroundColor: '#FFFCE3',
+        backgroundColor: 'white',
         backgroundImage: 'url("bank-note.svg")',
       },
     }
