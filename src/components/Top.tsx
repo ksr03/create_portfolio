@@ -21,7 +21,7 @@ const Top = () => {
             paddingX='15px'
             w='80%'
             maxWidth='1000px'
-            color='white' 
+            color='#EEEEEE' 
             fontSize='30px' 
             fontWeight='bold' 
             textAlign='left'
