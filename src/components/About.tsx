@@ -15,7 +15,7 @@ const About = () => {
         paddingBottom='10px'
         w='80%'
         maxWidth='1000px'
-        bg='#F2F2F2'
+        bg='#D6D6D6'
         spacing={0}
     >
         <Text 
@@ -43,10 +43,11 @@ const About = () => {
         <Box
             w={ w < 1000 ? `${(1-w/1000)*30 + 65}%` : '65%'}
             paddingX='30px'
-            paddingY='20px'
+            paddingY='15px'
             marginTop='30px'
             marginBottom='30px' 
-            bg='white'
+            border='1px solid #F5F5F5'
+            bg='whiteAlpha.500'
             borderRadius='10px'
         >
             <HStack marginTop='5px' marginBottom='20px'>

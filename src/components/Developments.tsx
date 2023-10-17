@@ -34,7 +34,7 @@ const Developments = () => {
   return (
     <VStack 
       w='80%' 
-      bg='#F2F2F2' 
+      bg='#D6D6D6' 
       maxWidth='1000px' 
       paddingBottom='30px'
     >

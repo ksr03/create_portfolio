@@ -29,7 +29,7 @@ const Header = () => {
             alignItems='center' 
             h="60px" 
             w='100%'
-            bg='rgba(242, 242, 242, 0.8)'
+            bg='rgba(255, 255, 255, 0.4)'
             backdropFilter='auto' 
             backdropBlur='5px'
             filter='auto'
