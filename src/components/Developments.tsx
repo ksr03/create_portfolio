@@ -1,7 +1,7 @@
 import React from 'react'
-import DevPart from './DevPart'
+import DevPart from '@components/DevPart'
 import { VStack, Wrap, WrapItem, Text, Box } from '@chakra-ui/layout'
-import developments from '../data/developments.json'
+import developments from '@data/developments.json'
 
 type dev_type = {
   image: string

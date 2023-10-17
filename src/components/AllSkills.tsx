@@ -1,6 +1,6 @@
 import React from 'react'
-import Skills from './Skills'
-import myskills from '../data/myskills.json'
+import Skills from '@components/Skills'
+import myskills from '@data/myskills.json'
 
 const AllSkills = () => {
   return (
