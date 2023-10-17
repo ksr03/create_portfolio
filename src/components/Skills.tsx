@@ -23,11 +23,11 @@ const Skills = ({genre_name, skill_list}: Props) => {
 
   return (
     <>
-        <HStack marginTop='15px' marginBottom='10px' marginLeft='10px' h='20px'>
-            <RiCircleFill color='#3D454B' size='10px' />
-            <Text fontWeight='bold'>{genre_name}</Text>
+        <HStack marginTop='25px' marginBottom='10px' marginLeft='10px' h='20px'>
+            <RiCircleFill color='#303030' size='10px' />
+            <Text fontWeight='bold' color='#464646'>{genre_name}</Text>
         </HStack>
-        <Box paddingBottom='10px' w='100%' display='flex' flexWrap='wrap' >
+        <Box paddingBottom='20px' w='100%' display='flex' flexWrap='wrap' >
             {FrontSkills}
         </Box>
         <hr color='#EEEEEE' style={{ width: '95%' }}/>

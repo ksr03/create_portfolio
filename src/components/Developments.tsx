@@ -34,25 +34,24 @@ const Developments = () => {
   return (
     <VStack 
       w='80%' 
-      bg='#F1F1DB' 
+      bg='#F2F2F2' 
       maxWidth='1000px' 
       paddingBottom='30px'
     >
         <Text 
-          marginTop='25px'
-          marginBottom='10px'
+          marginTop='5px'
+          marginBottom='0px'
           fontSize='30px' 
           fontWeight='bold' 
-          color='#3D454B'
+          color='#036a80'
         >
             Developments
         </Text>
         <Text 
-          marginBottom='10px'
+          marginBottom='15px'
           paddingY='8px'
           paddingX='15px'
-          rounded='10px' 
-          bg='white'
+          fontSize='15px'
         >
           今までに作成した開発物です。クリックすると詳細が表示されます。
         </Text>

@@ -46,7 +46,7 @@ const Header = () => {
             <HStack spacing="15px" marginRight="20px">
                 <Link href='https://twitter.com/ksr03_dev' rounded="10px">
                     <RiTwitterXLine 
-                        size="35px" 
+                        size="30px" 
                         onMouseEnter={handleMouseEnter1}
                         onMouseLeave={handleMouseLeave1}
                         color={iconColor1}
@@ -55,7 +55,7 @@ const Header = () => {
                 </Link>
                 <Link href='https://github.com/ksr03' rounded="10px">
                     <TbBrandGithub 
-                        size="40px" 
+                        size="35px" 
                         onMouseEnter={handleMouseEnter2}
                         onMouseLeave={handleMouseLeave2}
                         color={iconColor2}

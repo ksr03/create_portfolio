@@ -1,16 +1,20 @@
 import React from 'react'
+import getWindowSize from './getWindowSize'
 import { Center, Text, Image } from '@chakra-ui/react'
 
 const Top = () => {
+  const w = getWindowSize()[0]
   return (
     <Center w='100%'>
         <Image 
             src='top_image.jpg'
             alt='イメージ画像'
             w='80%'
+            h={w > 800 ? `${(w-800)*0.5 + 500}px` : '500px'}
             maxWidth='1000px'
-            h='500px'
+            maxHeight='750px'
             objectFit='cover'
+            objectPosition='bottom'
             marginY={0}
         />
         <Text 
