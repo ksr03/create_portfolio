@@ -10,7 +10,7 @@ export const theme = extendTheme({
       body: {
         margin: 0,
         padding: 0,
-        backgroundColor: '#FFFCE3',
+        backgroundColor: '#FCFCEE',
         backgroundImage: 'url("bank-note.svg")',
       },
     }

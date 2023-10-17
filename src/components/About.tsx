@@ -11,6 +11,8 @@ const About = () => {
     const w = getWindowSize()[0]
   return (
     <VStack 
+        paddingTop='15px'
+        paddingBottom='10px'
         w='80%'
         maxWidth='1000px'
         bg='#FFFEF8'
@@ -52,7 +54,7 @@ const About = () => {
                 <Text fontWeight='bold'>私について</Text>
             </HStack>
             <Text marginX='auto' paddingBottom='20px' w='95%' lineHeight='25px' >
-                情報系学科の大学生です。UIやデザインに興味があります。バックエンド・フロントエンド共に学習中です。
+                情報系学科の大学生です。UI/UXやデザインに興味があります。バックエンド・フロントエンド共に学習中です。
             </Text>
             <hr/>
             <HStack marginTop='15px' marginBottom='15px'>

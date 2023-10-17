@@ -34,12 +34,12 @@ const Developments = () => {
   return (
     <VStack 
       w='80%' 
-      bg='#FFDFD4' 
+      bg='#F1F1DB' 
       maxWidth='1000px' 
       paddingBottom='30px'
     >
         <Text 
-          marginTop='15px'
+          marginTop='25px'
           marginBottom='10px'
           fontSize='30px' 
           fontWeight='bold' 
