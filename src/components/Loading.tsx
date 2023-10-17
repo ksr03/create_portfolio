@@ -13,9 +13,9 @@ const Loading = ({isLoading}:Props) => {
     return (
         <circle 
             key={index} 
-            cx='125px' 
+            cx='115px' 
             cy='75px' 
-            r='10px' 
+            r='6px' 
             stroke='transparent' 
             className='load-blink-dot' 
             style={{animationDelay: animationDelay}} 

@@ -6,7 +6,7 @@
 @keyframes blink-dot {
     0% {
         opacity: 1;
-        fill: rgb(218, 128, 128);
+        fill: rgb(3, 106, 128);
     }
     100% {
         opacity: 1;
