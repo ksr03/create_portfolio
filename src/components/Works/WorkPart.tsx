@@ -15,7 +15,7 @@ type Props = {
     focus: string
 }
 
-const WorkPart = ({image, title, introduction, date, skills, detail, focus}: Props) => {
+const DevPart = ({image, title, introduction, date, skills, detail, focus}: Props) => {
     const [show, setShow] = useState(false)
     return (
     <>
@@ -27,6 +27,7 @@ const WorkPart = ({image, title, introduction, date, skills, detail, focus}: Pro
             borderRadius='5px'
             cursor='pointer'
             transition='.15s'
+            zIndex='5'
             _hover={{ bg: "#FAFAFA"}}
             onClick={() => setShow(true)}
         >
@@ -79,4 +80,4 @@ const WorkPart = ({image, title, introduction, date, skills, detail, focus}: Pro
     )
 }
 
-export default WorkPart
+export default DevPart

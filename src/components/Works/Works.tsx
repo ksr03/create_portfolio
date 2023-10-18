@@ -37,7 +37,6 @@ const Works = () => {
       bg='#D6D6D6' 
       maxWidth='1000px' 
       paddingBottom='30px'
-      zIndex='5'
     >
         <Text 
           marginTop='5px'
@@ -45,6 +44,7 @@ const Works = () => {
           fontSize='30px' 
           fontWeight='bold' 
           color='#036a80'
+          zIndex='5'
         >
             Works
         </Text>
@@ -53,6 +53,7 @@ const Works = () => {
           paddingY='8px'
           paddingX='15px'
           fontSize='15px'
+          zIndex='5'
         >
           今までに作成した開発物です。クリックすると詳細が表示されます。
         </Text>
