@@ -44,6 +44,7 @@ const Works = () => {
           fontSize='30px' 
           fontWeight='bold' 
           color='#036a80'
+          zIndex='5'
         >
             Works
         </Text>
@@ -52,6 +53,7 @@ const Works = () => {
           paddingY='8px'
           paddingX='15px'
           fontSize='15px'
+          zIndex='5'
         >
           今までに作成した開発物です。クリックすると詳細が表示されます。
         </Text>
