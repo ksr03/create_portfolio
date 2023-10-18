@@ -1,5 +1,4 @@
 import React from 'react'
-import getWindowSize from '@hooks/getWindowSize'
 import { useState } from 'react'
 import { HStack, VStack, Box, Text, Spacer } from '@chakra-ui/layout'
 import { CloseIcon } from '@chakra-ui/icons'
@@ -29,11 +28,6 @@ const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
         }, 200) 
         document.body.style.overflow = 'auto'
     }
-
-    let scale = 1
-    const w = getWindowSize()[0]
-    if(w < 500)
-        scale = w / 450 
 
     return (
         <>

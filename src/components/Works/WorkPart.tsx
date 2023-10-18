@@ -15,7 +15,7 @@ type Props = {
     focus: string
 }
 
-const DevPart = ({image, title, introduction, date, skills, detail, focus}: Props) => {
+const WorkPart = ({image, title, introduction, date, skills, detail, focus}: Props) => {
     const [show, setShow] = useState(false)
     return (
     <>
@@ -80,4 +80,4 @@ const DevPart = ({image, title, introduction, date, skills, detail, focus}: Prop
     )
 }
 
-export default DevPart
+export default WorkPart

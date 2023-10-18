@@ -7,7 +7,7 @@ type Props = {
     level: number
 }
 
-const Skill = ({name, level}: Props) => {
+const SkillPart = ({name, level}: Props) => {
   return (
     <HStack margin='5px' paddingLeft='12px' paddingRight='15px' h='35px' bg='#F8F8F8' rounded='20px'>
         {level == 0 ? <FaRegFaceMeh size='18px' color='#6DB633'/> : <FaRegFaceLaugh size='18px' color='#3278E1' />}
@@ -16,4 +16,4 @@ const Skill = ({name, level}: Props) => {
   )
 }
 
-export default Skill
+export default SkillPart
