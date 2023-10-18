@@ -16,11 +16,16 @@ type Props = {
 const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
 
     //モーダルの状態
+    //0:非表示から表示へ 1:表示中 2:表示から非表示へ
     const [modalState, setModalState] = useState(0)
+
+    //モーダルが表示された際の処理
     if (show && modalState === 0){
         setTimeout(() => { setModalState(1) }, 1)  
         document.body.style.overflow = 'hidden'
     }
+
+    //モーダルが閉じられた際の処理
     if (modalState === 2){
         setTimeout(() => { 
             setShow(false) 

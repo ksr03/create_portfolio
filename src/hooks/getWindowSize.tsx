@@ -1,5 +1,6 @@
 import { useLayoutEffect, useState} from 'react'
 
+//ウィンドウの幅・高さを返す関数
 const getWindowSize = (): number[] => {
     const [size, setSize] = useState([0, 0]);
     useLayoutEffect(() => {

@@ -7,6 +7,7 @@ type Props = {
 }
 
 const Loading = ({isLoading}:Props) => {
+  //スピナーを構成する12個の円の配列
   const Circle = Array.from({length: 12}, (_, index) => {
     const animationDelay = `${(index/10).toFixed(1)}s`
     const degree = index * 30
