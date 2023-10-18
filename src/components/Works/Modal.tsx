@@ -15,17 +15,19 @@ type Props = {
 }
 
 const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
-    
+
     //モーダルの状態
     const [modalState, setModalState] = useState(0)
     if (show && modalState === 0){
-        setTimeout(() => { setModalState(1) }, 1)        
+        setTimeout(() => { setModalState(1) }, 1)  
+        document.body.style.overflow = 'hidden'
     }
     if (modalState === 2){
         setTimeout(() => { 
             setShow(false) 
             setModalState(0) 
         }, 200) 
+        document.body.style.overflow = 'auto'
     }
 
     let scale = 1

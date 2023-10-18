@@ -10,10 +10,13 @@ import { VStack } from '@chakra-ui/react';
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true)
   addEventListener('load', () => {setIsLoading(false)})
+
+  const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth
+
   return (
-    <div className="App">
+    <div className="App" style={{width: `calc(100vw - ${scrollBarWidth}px)`}}>
       <Loading isLoading={isLoading} />
-      <Header />
+      <Header/>
       <VStack marginBottom={50} justify='center' spacing={0}>
         <Top />
         <About />

@@ -28,7 +28,7 @@ const Header = () => {
             minWidth='max-content' 
             alignItems='center' 
             h="60px" 
-            w='100%'
+            w='100vw'
             bg='rgba(255, 255, 255, 0.4)'
             backdropFilter='auto' 
             backdropBlur='5px'
@@ -43,7 +43,7 @@ const Header = () => {
                 </Text>
             </Link>
             <Spacer/>
-            <HStack spacing="15px" marginRight="20px">
+            <HStack spacing="15px" marginRight="25px">
                 <Link href='https://twitter.com/ksr03_dev' rounded="10px">
                     <RiTwitterXLine 
                         size="30px" 
