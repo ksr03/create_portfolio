@@ -17,7 +17,6 @@ const About = () => {
         maxWidth='1000px'
         bg='#D6D6D6'
         spacing={0}
-        zIndex='5'
     >
         <Text 
             marginY='20px'
