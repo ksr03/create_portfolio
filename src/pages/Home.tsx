@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Header from '@components/Header';
 import Top from '@components/Top';
 import About from '@components/About/About';
-import Developments from '@components/Developments/Developments';
+import Developments from '@components/Works/Works';
 import Copyright from '@components/Copyright';
 import Loading from '@components/Loading';
 import { VStack } from '@chakra-ui/react';

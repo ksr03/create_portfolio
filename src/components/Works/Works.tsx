@@ -1,5 +1,5 @@
 import React from 'react'
-import DevPart from '@components/Developments/DevPart'
+import DevPart from '@components/Works/WorkPart'
 import { VStack, Wrap, WrapItem, Text, Box } from '@chakra-ui/layout'
 import developments from '@data/developments.json'
 

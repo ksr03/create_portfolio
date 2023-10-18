@@ -1,7 +1,7 @@
 import React from 'react'
 import getWindowSize from '@hooks/getWindowSize'
 import AllSkills from '@components/About/AllSkills'
-import Guide from '@components/Developments/Guide'
+import Guide from '@components/Works/Guide'
 import { VStack, HStack, Text, Box } from '@chakra-ui/layout'
 import { Image } from '@chakra-ui/image'
 import { LiaUserCircle } from 'react-icons/lia'
