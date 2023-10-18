@@ -15,17 +15,19 @@ type Props = {
 }
 
 const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
-    
+
     //モーダルの状態
     const [modalState, setModalState] = useState(0)
     if (show && modalState === 0){
-        setTimeout(() => { setModalState(1) }, 1)        
+        setTimeout(() => { setModalState(1) }, 1)  
+        document.body.style.overflow = 'hidden'
     }
     if (modalState === 2){
         setTimeout(() => { 
             setShow(false) 
             setModalState(0) 
         }, 200) 
+        document.body.style.overflow = 'auto'
     }
 
     let scale = 1
@@ -58,7 +60,7 @@ const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
                             h='90%' 
                             maxWidth='600px'
                             maxHeight='600px' 
-                            rounded='20px'
+                            rounded='5px'
                             transform={modalState === 1 ? 'scale(1)' : 'scale(.9)'}
                             transition='.2s'
                             onClick={(e) => e.stopPropagation()}
@@ -66,7 +68,7 @@ const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
                             <Box
                                 w='100%' 
                                 h='200px' 
-                                roundedTop='20px'
+                                roundedTop='5px'
                                 overflow='hidden'
                                 display='flex'
                                 justifyContent='center'
@@ -95,24 +97,24 @@ const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
                                     onClick={()=>setModalState(2)} 
                                 />
                             </HStack>
-                            <HStack marginY={5} h='50px'>
-                                <Text marginRight='20px' fontSize={scale*20}>作品名:</Text>
-                                <Text fontSize={scale*35}>{title}</Text>
-                            </HStack>
-                            <HStack h='80px'>
-                                <Text marginLeft='30px' w='20%' fontSize={scale*15}>概要:</Text>
-                                <Text marginRight='30px' w='80%' fontSize={scale*17}>{detail}</Text>
-                            </HStack>
-                            <hr style={{width: '90%'}}/>
-                            <HStack h='120px'>
-                                <Text marginLeft='30px' w='20%' fontSize={scale*15}>こだわり:</Text>
-                                <Text marginRight='30px' w='80%' fontSize={scale*17}>{focus}</Text>
-                            </HStack>
-                            <hr style={{width: '90%'}}/>
-                            <HStack h='30px' w='100%'>
-                                <Text marginLeft='30px' w='20%' fontSize={scale*15}>使用技術:</Text>
-                                <Text marginRight='30px' w='80%' fontSize={scale*17}>{skills}</Text>
-                            </HStack>
+                            <VStack w='100%' overflowY='scroll'>
+                                <HStack marginY='20px' h='50px' w='90%'>
+                                    <Text w='20%' textAlign='center' fontSize='15px' color='#036a80'>作品名</Text>
+                                    <Text w='80%' textAlign='center' fontSize='25px'>{title}</Text>
+                                </HStack>
+                                <HStack marginBottom='15px' paddingBottom='15px' w='90%' borderBottom='1px solid #DDDDDD'>
+                                    <Text w='20%' textAlign='center' fontSize='14px' color='#036a80'>概要</Text>
+                                    <Text w='80%' fontSize='16px'>{detail}</Text>
+                                </HStack>
+                                <HStack marginBottom='16px' paddingBottom='15px' w='90%' borderBottom='1px solid #DDDDDD'>
+                                    <Text w='20%' textAlign='center' fontSize='14px' color='#036a80'>工夫</Text>
+                                    <Text w='80%' fontSize='16px'>{focus}</Text>
+                                </HStack>
+                                <HStack marginBottom='20px' w='90%'>
+                                    <Text w='20%' textAlign='center' fontSize='14px' color='#036a80'>技術</Text>
+                                    <Text w='80%' fontSize='16px'>{skills}</Text>
+                                </HStack>
+                            </VStack>
                         </VStack>
                     </Box>
                 ) : (
