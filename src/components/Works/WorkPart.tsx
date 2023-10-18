@@ -27,6 +27,7 @@ const WorkPart = ({image, title, introduction, date, skills, detail, focus}: Pro
             borderRadius='5px'
             cursor='pointer'
             transition='.15s'
+            zIndex='5'
             _hover={{ bg: "#FAFAFA"}}
             onClick={() => setShow(true)}
         >
