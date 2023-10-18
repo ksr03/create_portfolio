@@ -29,6 +29,7 @@ const DevPart = ({image, title, introduction, date, skills, detail, focus}: Prop
             transition='.15s'
             _hover={{ bg: "#FAFAFA"}}
             onClick={() => setShow(true)}
+            zIndex='5'
         >
             <Image
                 w='100%'
