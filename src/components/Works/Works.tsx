@@ -45,7 +45,7 @@ const Developments = () => {
           fontWeight='bold' 
           color='#036a80'
         >
-            Developments
+            Works
         </Text>
         <Text 
           marginBottom='15px'
