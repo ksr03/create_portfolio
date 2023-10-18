@@ -1,8 +1,16 @@
 import React from 'react'
+import Header from '@components/Header'
+import NotFound from '@components/NotFound'
+import { VStack } from '@chakra-ui/layout'
 
 const NoMatch = () => {
   return (
-    <div className='App'>このページは存在しません。</div>
+    <>
+      <Header/>
+      <VStack marginBottom={50} justify='center' spacing={0}>
+        <NotFound/>
+      </VStack>
+    </>
   )
 }
 
