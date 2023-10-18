@@ -5,7 +5,7 @@ import { AiOutlineRight } from 'react-icons/ai'
 const NotFound = () => {
   return (
     <>
-        <VStack w='80%' bg='#D6D6D6'>
+        <VStack w='80%' zIndex='5' bg='#D6D6D6'>
             <Box h='80px' />
             <Text fontSize='40px' fontWeight='bold'>Not Found</Text>
             <Text marginBottom='10px' fontSize='17px'>このページは存在しません。</Text>
