@@ -37,6 +37,7 @@ const Works = () => {
       bg='#D6D6D6' 
       maxWidth='1000px' 
       paddingBottom='30px'
+      zIndex='5'
     >
         <Text 
           marginTop='5px'
