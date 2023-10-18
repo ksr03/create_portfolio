@@ -1,5 +1,5 @@
 import React from 'react'
-import getWindowSize from '@components/getWindowSize'
+import getWindowSize from '@hooks/getWindowSize'
 import { useState } from 'react'
 import { HStack, VStack, Box, Text, Spacer } from '@chakra-ui/layout'
 import { CloseIcon } from '@chakra-ui/icons'

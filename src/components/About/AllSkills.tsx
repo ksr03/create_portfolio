@@ -1,5 +1,5 @@
 import React from 'react'
-import Skills from '@components/Skills'
+import Skills from '@components/About/SkillList'
 import myskills from '@data/myskills.json'
 
 const AllSkills = () => {

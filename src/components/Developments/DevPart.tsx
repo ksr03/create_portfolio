@@ -1,5 +1,5 @@
 import React from 'react'
-import Modal from '@components/Modal'
+import Modal from '@components/Developments/Modal'
 import { useState } from 'react'
 import { HStack, Text, VStack } from '@chakra-ui/layout'
 import { Image } from '@chakra-ui/image'

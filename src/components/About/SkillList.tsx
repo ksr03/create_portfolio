@@ -1,5 +1,5 @@
 import React from 'react'
-import Skill from '@components/Skill'
+import Skill from '@components/About/SkillPart'
 import { HStack, Text, Box } from '@chakra-ui/layout'
 import { RiCircleFill } from 'react-icons/ri'
 
