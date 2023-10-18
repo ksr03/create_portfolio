@@ -1,5 +1,4 @@
 import React from 'react'
-import getWindowSize from '@hooks/getWindowSize'
 import { useState } from 'react'
 import { HStack, VStack, Box, Text, Spacer } from '@chakra-ui/layout'
 import { CloseIcon } from '@chakra-ui/icons'
@@ -17,11 +16,16 @@ type Props = {
 const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
 
     //モーダルの状態
+    //0:非表示から表示へ 1:表示中 2:表示から非表示へ
     const [modalState, setModalState] = useState(0)
+
+    //モーダルが表示された際の処理
     if (show && modalState === 0){
         setTimeout(() => { setModalState(1) }, 1)  
         document.body.style.overflow = 'hidden'
     }
+
+    //モーダルが閉じられた際の処理
     if (modalState === 2){
         setTimeout(() => { 
             setShow(false) 
@@ -29,11 +33,6 @@ const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
         }, 200) 
         document.body.style.overflow = 'auto'
     }
-
-    let scale = 1
-    const w = getWindowSize()[0]
-    if(w < 500)
-        scale = w / 450 
 
     return (
         <>

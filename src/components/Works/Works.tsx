@@ -3,7 +3,7 @@ import DevPart from '@components/Works/WorkPart'
 import { VStack, Wrap, WrapItem, Text, Box } from '@chakra-ui/layout'
 import developments from '@data/developments.json'
 
-type dev_type = {
+type work_type = {
   image: string
   title: string
   introduction: string
@@ -13,9 +13,9 @@ type dev_type = {
   focus: string
 }
 
-const Developments = () => {
+const Works = () => {
   // eslint-disable-next-line
-  const DevList:any = developments.map(( {image, title, introduction, date, skills, detail, focus}: dev_type, index: number )=>{
+  const DevList:any = developments.map(( {image, title, introduction, date, skills, detail, focus}: work_type, index: number )=>{
     return (
       <WrapItem key={index}>
           <DevPart 
@@ -67,4 +67,4 @@ const Developments = () => {
   )
 }
 
-export default Developments
+export default Works

@@ -13,7 +13,7 @@ type Props = {
     skill_list: Array<skill_type>
 }
 
-const Skills = ({genre_name, skill_list}: Props) => {
+const SkillList = ({genre_name, skill_list}: Props) => {
     // eslint-disable-next-line
     const FrontSkills:any = skill_list.map(({name, level}: skill_type, index: number) => {
         return (
@@ -34,4 +34,4 @@ const Skills = ({genre_name, skill_list}: Props) => {
   )
 }
 
-export default Skills
+export default SkillList
