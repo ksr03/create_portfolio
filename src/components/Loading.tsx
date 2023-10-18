@@ -1,5 +1,5 @@
 import React from 'react'
-import '@components/Loading.css'
+import '@style/Loading.css'
 import { Box } from '@chakra-ui/react'
 
 type Props = {

@@ -6,7 +6,9 @@ module.exports = (config) => {
         alias: {
             ...config.alias,
             '@data': path.resolve(__dirname, './src/data/'),
-            '@components': path.resolve(__dirname, './src/components/')
+            '@components': path.resolve(__dirname, './src/components/'),
+            '@style': path.resolve(__dirname, './src/style/'),
+            '@pages': path.resolve(__dirname, './src/pages/')
         },
         extensions: ['.js', '.ts', '.d.ts', '.tsx']
     };
