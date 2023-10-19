@@ -11,8 +11,6 @@ This is a project for my portfolio.
 ## 🔷 使い方
 アクセスはこちらから ➡ [しろのポートフォリオ](https://create-portfolio-ruddy.vercel.app/)
 <br><br>
-![portfolio](https://github.com/ksr03/create_portfolio/assets/117695575/514d141e-0de0-4ac8-a783-4dd61a1eebd4)
-<br><br>
 
 ## 🔷 利用したもの
 * TypeScript
