@@ -9,7 +9,7 @@ This is a project for my portfolio.
 <br><br>
 
 ## 🔷 使い方
-アクセスはこちらから ➡ [デプロイしたらここにリンクを貼ります。]
+アクセスはこちらから ➡ [しろのポートフォリオ](https://create-portfolio-ruddy.vercel.app/)
 <br><br>
 ![portfolio](https://github.com/ksr03/create_portfolio/assets/117695575/514d141e-0de0-4ac8-a783-4dd61a1eebd4)
 <br><br>
@@ -39,6 +39,7 @@ This is a project for my portfolio.
 <br><br>
 
 ## 🔷 今後の展望
+* 独自ドメインの設定
 * プロフィールや新しい開発物を随時追加したい
 * ページの読み込みデータ量の削減
 * 既に作成した開発物を、実際に動かせるページを作成したい
