@@ -51,4 +51,4 @@ This is a project for my portfolio.
 * [CSSとJavaScriptでWebページにローディングアニメーションを表示させる方法](https://www.webcreatorbox.com/tech/loading-animation)
 * [Webページのローディング画面](https://qiita.com/tnakagawa/items/13246a6516b61f35d2f9)
 * [Reactの基礎を学ぶのにモーダルウィンドウはいい教材](https://reffect.co.jp/react/react-modal/)
-* [shields.ioを使って技術系アイコンを量産した](https://qiita.com/s-yoshiki/items/436bbe1f7160b610b05c)
+* [addEventListener() does not work well on Safari](https://github.com/vercel/next.js/discussions/13929)
