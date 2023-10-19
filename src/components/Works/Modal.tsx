@@ -75,7 +75,6 @@ const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
                             >
                                 <video 
                                     src={'dev/'+image+".mp4"} 
-                                    poster={'dev/'+image+'png'}
                                     style={{transform: 'scale(1.5)'}}
                                     autoPlay
                                     muted
