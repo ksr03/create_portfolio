@@ -9,7 +9,7 @@ This is a project for my portfolio.
 <br><br>
 
 ## 🔷 使い方
-アクセスはこちらから ➡ [しろのポートフォリオ](https://www.ksr03.com/)
+アクセスはこちらから ➡ [しろのポートフォリオ]([https://www.ksr03.com/](https://create-portfolio-ruddy.vercel.app/))
 <br><br>
 
 ## 🔷 利用したもの
