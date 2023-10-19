@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Header from '@components/Header'
 import NotFound from '@components/NotFound'
 import Loading from '@components/Loading';
@@ -6,7 +6,13 @@ import { VStack } from '@chakra-ui/layout'
 
 const NoMatch = () => {
   const [isLoading, setIsLoading] = useState(true)
-  addEventListener('load', () => {setIsLoading(false)})
+  useEffect(() => {
+    if (document.readyState === 'complete') {
+      setIsLoading(false);
+    } else {
+      window.addEventListener('load', ()=>{setIsLoading(false)});
+    }
+  }, []);
 
   return (
     <>
