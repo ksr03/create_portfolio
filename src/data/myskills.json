@@ -37,13 +37,13 @@
         {
             "name": "Python",
             "level": 1
-        },
-        {
-            "name": "SQL",
-            "level": 1
         }
     ],
     "other": [
+        {
+            "name": "SQL",
+            "level": 1
+        },
         {
             "name": "Arduino",
             "level": 0
