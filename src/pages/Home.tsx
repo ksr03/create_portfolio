@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Header from '@components/Header';
 import Top from '@components/Top';
 import About from '@components/About/About';
@@ -9,7 +9,13 @@ import { VStack } from '@chakra-ui/react';
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true)
-  addEventListener('load', () => {setIsLoading(false)})
+  useEffect(() => {
+    if (document.readyState === 'complete') {
+      setIsLoading(false);
+    } else {
+      window.addEventListener('load', ()=>{setIsLoading(false)});
+    }
+  }, []);
 
   const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth
 
