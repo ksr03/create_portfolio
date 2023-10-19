@@ -1,5 +1,7 @@
-# 概要
+# 概要 | overview
 このプロジェクトは、私のポートフォリオを作成するためのものです。
+<br>
+This is a project for my portfolio.
 <br><br>
 
 ## 🔷 目的
