@@ -43,7 +43,8 @@ const About = () => {
         </HStack>
         <Box
             w={ w < 1000 ? `${(1-w/1000)*30 + 65}%` : '65%'}
-            paddingX='30px'
+            minWidth='260px'
+            paddingX='25px'
             paddingY='15px'
             marginTop='30px'
             marginBottom='30px' 
@@ -55,10 +56,9 @@ const About = () => {
                 <LiaUserCircle size='35px' color='#181818' />
                 <Text fontWeight='bold'>私について</Text>
             </HStack>
-            <Text marginX='auto' paddingBottom='20px' w='95%' lineHeight='25px' fontSize='15px' >
+            <Text marginX='auto' paddingBottom='25px' w='95%' borderBottom='1px solid #F7F7F7' lineHeight='25px' fontSize='15px' >
                 情報系学科の大学生です。UI/UXやデザインに興味があります。バックエンド・フロントエンド共に学習中です。
             </Text>
-            <hr/>
             <HStack marginTop='30px' marginBottom='25px'>
                 <RiComputerLine size='32px' color='#181818' />
                 <Text fontWeight='bold'>使用できるスキル</Text>
