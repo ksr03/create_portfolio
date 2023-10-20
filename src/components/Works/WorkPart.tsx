@@ -13,9 +13,11 @@ type Props = {
     skills: string
     detail: string
     focus: string
+    github: string
+    demo: string
 }
 
-const DevPart = ({image, title, introduction, date, skills, detail, focus}: Props) => {
+const DevPart = ({image, title, introduction, date, skills, detail, focus, github, demo}: Props) => {
     const [show, setShow] = useState(false)
     return (
     <>
@@ -75,6 +77,8 @@ const DevPart = ({image, title, introduction, date, skills, detail, focus}: Prop
             skills={skills}
             detail={detail}
             focus={focus}
+            github={github}
+            demo={demo}
         />
     </>
     )
