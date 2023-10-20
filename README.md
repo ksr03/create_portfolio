@@ -19,6 +19,7 @@ This is a project for my portfolio.
 * Google Fonts (フォント)
 * React Icons (アイコン)
 * Hero Patterns (SVGパターン生成)
+* Vercel (デプロイ)
 <br><br>
 ## 🔷 工夫した点
 
