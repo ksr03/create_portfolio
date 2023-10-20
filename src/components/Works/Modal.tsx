@@ -3,7 +3,15 @@ import LinkButton from '@components/LinkButton'
 import { useState } from 'react'
 import { HStack, VStack, Box, Text, Spacer } from '@chakra-ui/layout'
 import { CloseIcon } from '@chakra-ui/icons'
-import { link } from 'fs'
+
+const ModalText = ({title, text}:{title:string, text:string}) => {
+    return (
+        <HStack marginBottom='15px' paddingBottom='20px' w='90%' borderBottom='1px solid #DDDDDD'>
+            <Text w='20%' textAlign='center' fontSize='14px' color='#036a80'>{title}</Text>
+            <Text w='80%' fontSize='16px'>{text}</Text>
+        </HStack>
+    )
+}
 
 type Props = {
     show: boolean
@@ -107,18 +115,9 @@ const Modal = ({show, setShow, image, title, skills, detail, focus, github, demo
                                     <Text w='20%' textAlign='center' fontSize='15px' color='#036a80'>作品名</Text>
                                     <Text w='80%' textAlign='center' fontSize='25px'>{title}</Text>
                                 </HStack>
-                                <HStack marginBottom='15px' paddingBottom='20px' w='90%' borderBottom='1px solid #DDDDDD'>
-                                    <Text w='20%' textAlign='center' fontSize='14px' color='#036a80'>概要</Text>
-                                    <Text w='80%' fontSize='16px'>{detail}</Text>
-                                </HStack>
-                                <HStack marginBottom='15px' paddingBottom='20px' w='90%' borderBottom='1px solid #DDDDDD'>
-                                    <Text w='20%' textAlign='center' fontSize='14px' color='#036a80'>工夫</Text>
-                                    <Text w='80%' fontSize='16px'>{focus}</Text>
-                                </HStack>
-                                <HStack marginBottom='15px' paddingBottom='20px' w='90%' borderBottom='1px solid #DDDDDD'>
-                                    <Text w='20%' textAlign='center' fontSize='14px' color='#036a80'>技術</Text>
-                                    <Text w='80%' fontSize='16px'>{skills}</Text>
-                                </HStack>
+                                <ModalText title='概要' text={detail} />
+                                <ModalText title='工夫' text={focus} />
+                                <ModalText title='技術' text={skills} />
                                 <LinkButton link={github} type='github' />
                                 <LinkButton link={demo} type='demo' />
                             </VStack>
