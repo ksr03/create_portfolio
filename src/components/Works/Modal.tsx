@@ -1,7 +1,9 @@
 import React from 'react'
+import LinkButton from '@components/LinkButton'
 import { useState } from 'react'
 import { HStack, VStack, Box, Text, Spacer } from '@chakra-ui/layout'
 import { CloseIcon } from '@chakra-ui/icons'
+import { link } from 'fs'
 
 type Props = {
     show: boolean
@@ -11,9 +13,11 @@ type Props = {
     skills: string
     detail: string
     focus: string
+    github: string
+    demo: string
 }
 
-const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
+const Modal = ({show, setShow, image, title, skills, detail, focus, github, demo}: Props) => {
 
     //モーダルの状態
     //0:非表示から表示へ 1:表示中 2:表示から非表示へ
@@ -98,23 +102,25 @@ const Modal = ({show, setShow, image, title, skills, detail, focus}: Props) => {
                                     onClick={()=>setModalState(2)} 
                                 />
                             </HStack>
-                            <VStack w='100%' overflowY='scroll'>
+                            <VStack paddingBottom='25px' w='100%' overflowY='scroll'>
                                 <HStack marginY='20px' h='50px' w='90%'>
                                     <Text w='20%' textAlign='center' fontSize='15px' color='#036a80'>作品名</Text>
                                     <Text w='80%' textAlign='center' fontSize='25px'>{title}</Text>
                                 </HStack>
-                                <HStack marginBottom='15px' paddingBottom='15px' w='90%' borderBottom='1px solid #DDDDDD'>
+                                <HStack marginBottom='15px' paddingBottom='20px' w='90%' borderBottom='1px solid #DDDDDD'>
                                     <Text w='20%' textAlign='center' fontSize='14px' color='#036a80'>概要</Text>
                                     <Text w='80%' fontSize='16px'>{detail}</Text>
                                 </HStack>
-                                <HStack marginBottom='16px' paddingBottom='15px' w='90%' borderBottom='1px solid #DDDDDD'>
+                                <HStack marginBottom='15px' paddingBottom='20px' w='90%' borderBottom='1px solid #DDDDDD'>
                                     <Text w='20%' textAlign='center' fontSize='14px' color='#036a80'>工夫</Text>
                                     <Text w='80%' fontSize='16px'>{focus}</Text>
                                 </HStack>
-                                <HStack marginBottom='20px' w='90%'>
+                                <HStack marginBottom='15px' paddingBottom='20px' w='90%' borderBottom='1px solid #DDDDDD'>
                                     <Text w='20%' textAlign='center' fontSize='14px' color='#036a80'>技術</Text>
                                     <Text w='80%' fontSize='16px'>{skills}</Text>
                                 </HStack>
+                                <LinkButton link={github} type='github' />
+                                <LinkButton link={demo} type='demo' />
                             </VStack>
                         </VStack>
                     </Box>

@@ -11,11 +11,13 @@ type work_type = {
   skills: string
   detail: string
   focus: string
+  github: string
+  demo: string
 }
 
 const Works = () => {
   // eslint-disable-next-line
-  const DevList:any = developments.map(( {image, title, introduction, date, skills, detail, focus}: work_type, index: number )=>{
+  const DevList:any = developments.map(( {image, title, introduction, date, skills, detail, focus, github, demo}: work_type, index: number )=>{
     return (
       <WrapItem key={index}>
           <DevPart 
@@ -26,6 +28,8 @@ const Works = () => {
             skills={skills}
             detail={detail}
             focus={focus}
+            github={github}
+            demo={demo}
           />
       </WrapItem>
     )
