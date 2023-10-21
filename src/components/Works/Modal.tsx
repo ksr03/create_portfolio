@@ -100,13 +100,14 @@ const Modal = ({show, setShow, image, title, skills, detail, focus, github, demo
                             >
                                 <Spacer />
                                 <CloseIcon 
-                                    marginTop='10px'
-                                    marginRight='10px'
-                                    boxSize='30px' 
-                                    color='rgba(255, 255, 255, .3)'
-                                    mixBlendMode='difference'
+                                    margin='10px'
+                                    padding='7px'
+                                    boxSize='50px' 
+                                    bg='#036a80'
+                                    color='white'
+                                    rounded='full'
                                     transition='.15s' 
-                                    _hover={{ color: "rgba(255, 255, 255, .5)" }}
+                                    _hover={{ bg: '#035B6D' }}
                                     onClick={()=>setModalState(2)} 
                                 />
                             </HStack>
