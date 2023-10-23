@@ -20,6 +20,7 @@ This is a project for my portfolio.
 * React Icons (アイコン)
 * Hero Patterns (SVGパターン生成)
 * Vercel (デプロイ)
+* Blender (画像の作成)
 <br><br>
 ## 🔷 工夫した点
 
