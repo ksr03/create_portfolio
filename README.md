@@ -9,7 +9,7 @@ This is a project for my portfolio.
 <br><br>
 
 ## 🔷 使い方
-アクセスはこちらから ➡ [しろのポートフォリオ](https://www.ksr03-dev.com/)
+アクセスはこちらから ➡ [ポートフォリオ](https://www.ksr03-dev.com/)
 <br><br>
 
 ## 🔷 利用したもの
