@@ -10,7 +10,7 @@
         },
         {
             "name": "Javascript",
-            "level": 0
+            "level": 1
         },
         {
             "name": "React",
@@ -50,14 +50,20 @@
         },
         {
             "name": "Processing",
-            "level": 0
-        },
+            "level": 1
+        }
+    ],
+    "tools": [
         {
             "name": "Git",
             "level": 1
         },
         {
             "name": "GitHub",
+            "level": 1
+        },
+        {
+            "name": "Figma",
             "level": 1
         }
     ]
