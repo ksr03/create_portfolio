@@ -8,6 +8,7 @@ const AllSkills = () => {
         <Skills genre_name='フロントエンド' skill_list={myskills.front}/>
         <Skills genre_name='バックエンド' skill_list={myskills.back}/>
         <Skills genre_name='その他' skill_list={myskills.other}/>
+        <Skills genre_name='ツール' skill_list={myskills.tools}/>
     </>
   )
 }
