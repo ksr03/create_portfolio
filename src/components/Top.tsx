@@ -28,10 +28,7 @@ const Top = () => {
             position='absolute'
             top='60px'
         >
-            in the Department of <br/>
-            information Science <br/>
-            and <br/>
-            Engineering
+            {/* テキスト */}
         </Text>
     </Center>
   )
