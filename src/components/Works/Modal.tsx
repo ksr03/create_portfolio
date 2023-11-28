@@ -1,5 +1,5 @@
 import React from 'react'
-import LinkButton from '@components/LinkButton'
+import LinkButton from '@components/Common/LinkButton'
 import { useState } from 'react'
 import { HStack, VStack, Box, Text, Spacer } from '@chakra-ui/layout'
 import { CloseIcon } from '@chakra-ui/icons'
