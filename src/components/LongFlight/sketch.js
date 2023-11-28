@@ -3,6 +3,71 @@ import p5 from 'p5';
 
 const sketch = (p) => {
 
+    /** 背景の山々を描画する*/
+    class Background {
+        /** 
+         * コンストラクタ
+         * @param {number} division 画面幅の分割数
+         * @param {number} speed 背景の移動速度
+         * @param {Array} color_set 色
+         * @param {number} height 山々の高さ
+         */
+        constructor(division, speed, height, color_set){
+        /** @param {number} displacement 変位 */
+        this.displacement = 0
+        /** @param {number} speed 背景の移動速度 */
+        this.speed = speed
+        /** @param {number} division 画面幅の分割数 */
+        this.division = division
+        /** @param {Array} color_set 色 */
+        this.color_set = color_set
+        /** @param {number} height 山々の高さ */
+        this.height = height
+        /** @param {number} bg 山の高さの配列 */
+        this.bg = []
+        for(var i=0; i<100; i++){
+            this.bg.push(p.noise(i*p.random(0, 0.3))*50)    
+        }
+        }
+        
+        /** drawで行う処理*/
+        draw(){
+        this.drawBackground()
+        this.update()
+        }
+        
+        /** メンバ変数を更新する*/
+        update(){
+        this.displacement -= this.speed
+        
+        if(this.displacement <= -1000/this.division){
+            var x = this.bg[0]
+            this.bg.shift()
+            this.bg.push(x)
+            this.displacement=0
+        }
+        }
+        
+        /** 山々を描画する*/
+        drawBackground(){
+        p.noStroke()
+        if(info.level == 1){
+            p.fill(this.color_set[0])
+        }else if(info.level == 2){
+            p.fill(p.lerpColor(this.color_set[0], this.color_set[1], (p.millis() - info.levelup_time) / 1000))
+        }else {
+            p.fill(p.lerpColor(this.color_set[1], this.color_set[2], (p.millis() - info.levelup_time) / 1000))
+        }
+        p.beginShape()
+            p.vertex(1000, 500)
+            p.vertex(0, 500)
+            for(var i=0; i<this.division+5; i++){
+                p.vertex(i*(1000/this.division)+this.displacement, this.bg[i]+this.height) 
+            }
+        p.endShape(p.CLOSE)
+        }
+    }
+
     /** タイトル表示を行う */
     class Title {
         /** コンストラクタ */
@@ -122,7 +187,8 @@ const sketch = (p) => {
     }
 
     //グローバル変数の宣言
-    var game_state
+    var bg_1, bg_2, bg_3
+    var game_state, enemy_list, info
     var titleClass, gameClass, scoreClass
   
     p.setup = () => {
@@ -130,9 +196,9 @@ const sketch = (p) => {
       p.textFont('Bahnschrift');
       game_state=0;
       titleClass = new Title()
-      // bg_1 = new p.background(50, 0.3, 300, [color(97, 147, 165), color(69, 104, 120), color(12, 45, 79)])
-      // bg_2 = new p.background(40, 0.5, 330, [color(86, 130, 146), color(39, 76, 97), color(4, 29, 56)])
-      // bg_3 = new p.background(30, 1, 350, [color(66, 106, 124), color(1, 38, 63), color(0, 10, 27)])
+      bg_1 = new Background(50, 0.3, 300, [p.color(97, 147, 165), p.color(69, 104, 120), p.color(12, 45, 79)])
+      bg_2 = new Background(40, 0.5, 330, [p.color(86, 130, 146), p.color(39, 76, 97), p.color(4, 29, 56)])
+      bg_3 = new Background(30, 1, 350, [p.color(66, 106, 124), p.color(1, 38, 63), p.color(0, 10, 27)])
     };
   
     p.draw = () => {
