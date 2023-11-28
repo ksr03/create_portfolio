@@ -1,8 +1,12 @@
 import React from 'react'
+import LongFlight from '@components/LongFlight/LongFlight'
 
 const ShootingGame = () => {
   return (
-    <div>ShootingGame</div>
+    <>
+      <div>ShootingGame</div>
+      <LongFlight/>
+    </>
   )
 }
 
