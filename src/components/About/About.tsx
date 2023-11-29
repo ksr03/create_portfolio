@@ -32,7 +32,7 @@ const About = () => {
                 marginRight='20px'
                 borderRadius='100px'
                 boxSize='110px'
-                src='user_image.jpg'
+                src='images/user_image.jpg'
                 alt='ユーザー画像'
                 objectFit='cover'
             />

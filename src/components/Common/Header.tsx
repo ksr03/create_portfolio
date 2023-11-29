@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Text, HStack, Flex, Spacer, Link } from '@chakra-ui/react';
+import { Text, HStack, Flex, Spacer, Link, Image } from '@chakra-ui/react';
 import { TbBrandGithub } from 'react-icons/tb'
 import { RiTwitterXLine } from 'react-icons/ri'
 
@@ -60,6 +60,17 @@ const Header = () => {
                         onMouseLeave={handleMouseLeave2}
                         color={iconColor2}
                         style={{transition: '.2s'}}
+                    />
+                </Link>
+                <Link href='https://qiita.com/ksr03' rounded="10px">
+                    <Image 
+                      bg='white' 
+                      boxSize='32px' 
+                      rounded='full' 
+                      src='images/favicon.png' 
+                      alt='Qiita'
+                      transition='.2s'
+                      _hover={{bg: '#EEEEEE'}}
                     />
                 </Link>
             </HStack>

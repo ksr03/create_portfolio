@@ -7,7 +7,7 @@ const Top = () => {
   return (
     <Center w='100%'>
         <Image 
-            src='top_image.jpg'
+            src='images/top_image.jpg'
             alt='イメージ画像'
             w='80%'
             h={w > 800 ? `${(w-800)*0.5 + 500}px` : '500px'}
