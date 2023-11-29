@@ -1,6 +1,6 @@
 import React from 'react'
-import LinkButton from '@components/LinkButton'
-import { VStack, HStack, Box, Text, Link } from '@chakra-ui/layout'
+import LinkButton from '@components/Common/LinkButton'
+import { VStack, Box, Text } from '@chakra-ui/layout'
 
 const NotFound = () => {
   return (

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import Header from '@components/Header'
+import Header from '@components/Common/Header'
 import NotFound from '@components/NotFound'
-import Loading from '@components/Loading';
+import Loading from '@components/Common/Loading';
 import { VStack } from '@chakra-ui/layout'
 
 const NoMatch = () => {
