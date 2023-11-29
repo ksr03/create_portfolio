@@ -13,11 +13,11 @@ const Detail = () => {
   return (
     <>
         <VStack
-            paddingTop='40px'
-            paddingBottom='10px'
+            paddingTop='30px'
+            paddingBottom='30px'
             w='80%'
             maxWidth='1000px'
-            bg='#D6D6D6'
+            bgGradient='linear(#AAB7CA, #D6D6D6)'
             spacing={0}
             zIndex='5'
         >
@@ -32,25 +32,28 @@ const Detail = () => {
             bg='whiteAlpha.500'
             borderRadius='10px'
             >
-                <HStack marginTop='5px' marginBottom='20px'>
+                <HStack marginTop='10px' marginBottom='20px'>
                     <GoQuestion size='35px' color='#181818'/>
                     <Text fontWeight='bold'>ゲームの説明</Text>
                 </HStack>
-                <Text marginX='auto' marginBottom='25px' paddingBottom='20px' w='95%' borderBottom='1px solid #F7F7F7' lineHeight='25px' fontSize='15px' >
+                <Text marginX='auto' w='95%' fontSize='15px' >
                     {shooting_game.guide}
                 </Text>
-                <HStack marginTop='5px' marginBottom='20px'>
+                <Text marginX='auto' marginBottom='30px' paddingBottom='20px' w='95%' borderBottom='1px solid #F7F7F7' lineHeight='25px' fontSize='15px' color='#FF002E' >
+                    PCのみ対応しています。
+                </Text>
+                <HStack marginBottom='20px'>
                     <RiComputerLine size='35px' color='#181818'/>
                     <Text fontWeight='bold'>使用技術</Text>
                 </HStack>
-                <Text marginX='auto' marginBottom='25px' paddingBottom='20px' w='95%' borderBottom='1px solid #F7F7F7' lineHeight='25px' fontSize='15px' >
+                <Text marginX='auto' marginBottom='30px' paddingBottom='20px' w='95%' borderBottom='1px solid #F7F7F7' lineHeight='25px' fontSize='15px' >
                     {shooting_game.skills}
                 </Text>
-                <HStack marginTop='5px' marginBottom='20px'>
+                <HStack marginBottom='20px'>
                     <FaRegStar size='35px' color='#181818'/>
                     <Text fontWeight='bold'>工夫した点</Text>
                 </HStack>
-                <Text marginX='auto' marginBottom='25px' paddingBottom='20px' w='95%' borderBottom='1px solid #F7F7F7' lineHeight='25px' fontSize='15px' >
+                <Text marginX='auto' marginBottom='30px' paddingBottom='20px' w='95%' borderBottom='1px solid #F7F7F7' lineHeight='25px' fontSize='15px' >
                     {shooting_game.focus}
                 </Text>
                 <VStack marginBottom='10px'>

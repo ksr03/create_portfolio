@@ -57,7 +57,7 @@ const About = () => {
                 <Text fontWeight='bold'>私について</Text>
             </HStack>
             <Text marginX='auto' paddingBottom='25px' w='95%' borderBottom='1px solid #F7F7F7' lineHeight='25px' fontSize='15px' >
-                情報系学科の大学生です。UI/UXやデザインに興味があります。バックエンド・フロントエンド共に学習中です。
+                工学部情報学科の4年生です。UI/UXやデザインに興味があります。バックエンド・フロントエンド共に学習中です。
             </Text>
             <HStack marginTop='30px' marginBottom='25px'>
                 <RiComputerLine size='32px' color='#181818' />

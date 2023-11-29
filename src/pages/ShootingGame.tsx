@@ -21,6 +21,12 @@ const ShootingGame = () => {
       <Loading isLoading={isLoading} />
       <Header/>
       <VStack marginBottom={50} justify='center' spacing={0}>
+        <VStack
+              w='80%'
+              h='60px'
+              maxWidth='1000px'
+              bg='#AAB7CA'
+        />
         <LongFlight/>
         <Detail/>
       </VStack>
