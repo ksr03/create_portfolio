@@ -4,7 +4,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import { theme } from '@style/theme';
 
 import Home from "@pages/Home"
-import ShootingGame from '@pages/ShootingGame';
+import Game from '@pages/Game';
 import NoMatch from '@pages/NoMatch';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
       <ChakraProvider theme={theme}>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/shooting_game' element={<ShootingGame />} />
+          <Route path='/game' element={<Game />} />
           <Route path='*' element={<NoMatch />} />
         </Routes> 
       </ChakraProvider>
