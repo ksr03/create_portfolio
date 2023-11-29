@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { Text, HStack, Flex, Spacer, Link } from '@chakra-ui/react';
+import { Text, HStack, Flex, Spacer, Link, Image } from '@chakra-ui/react';
 import { TbBrandGithub } from 'react-icons/tb'
-import { RiTwitterXLine } from 'react-icons/ri'
+import { FaXTwitter } from "react-icons/fa6";
 
 const Header = () => {
 
@@ -45,7 +45,7 @@ const Header = () => {
             <Spacer/>
             <HStack spacing="15px" marginRight="25px">
                 <Link href='https://twitter.com/ksr03_dev' rounded="10px">
-                    <RiTwitterXLine 
+                    <FaXTwitter
                         size="30px" 
                         onMouseEnter={handleMouseEnter1}
                         onMouseLeave={handleMouseLeave1}
@@ -60,6 +60,17 @@ const Header = () => {
                         onMouseLeave={handleMouseLeave2}
                         color={iconColor2}
                         style={{transition: '.2s'}}
+                    />
+                </Link>
+                <Link href='https://qiita.com/ksr03' rounded="10px">
+                    <Image 
+                      bg='white' 
+                      boxSize='33px' 
+                      rounded='full' 
+                      src='images/favicon.png' 
+                      alt='Qiita'
+                      transition='.2s'
+                      _hover={{bg: '#EEEEEE'}}
                     />
                 </Link>
             </HStack>
