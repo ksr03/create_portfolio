@@ -1234,7 +1234,7 @@ const sketch = (p) => {
 
         /** ゲームスタート */
         click(){
-            if(!this.in_transition && this.opacity >= 255){
+            if(!this.in_transition && this.opacity >= 255 &&  0 <= p.mouseX && p.mouseX <= 1000 && 0 <= p.mouseY && p.mouseY <= 500){
                 gameClass = new Game()
                 this.in_transition = true
             }
