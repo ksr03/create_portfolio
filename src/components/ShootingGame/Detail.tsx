@@ -36,7 +36,7 @@ const Detail = () => {
                     <GoQuestion size='35px' color='#181818'/>
                     <Text fontWeight='bold'>ゲームの説明</Text>
                 </HStack>
-                <Text marginX='auto' w='95%' fontSize='15px' >
+                <Text marginX='auto' w='95%' fontSize='15px' whiteSpace='pre-wrap' >
                     {shooting_game.guide}
                 </Text>
                 <Text marginX='auto' marginBottom='30px' paddingBottom='20px' w='95%' borderBottom='1px solid #F7F7F7' lineHeight='25px' fontSize='15px' color='#FF002E' >

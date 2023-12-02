@@ -107,6 +107,7 @@ const Modal = ({show, setShow, image, title, skills, detail, focus, github, demo
                                     color='white'
                                     rounded='full'
                                     transition='.15s' 
+                                    cursor='pointer'
                                     _hover={{ bg: '#035B6D' }}
                                     onClick={()=>setModalState(2)} 
                                 />
