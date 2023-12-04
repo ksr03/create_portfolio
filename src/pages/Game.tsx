@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
+import { isMobile } from 'react-device-detect';
 import Loading from '@components/Common/Loading';
 import Header from '@components/Common/Header'
 import LongFlight from '@components/ShootingGame/LongFlight'
 import Detail from '@components/ShootingGame/Detail';
 import Copyright from '@components/Common/Copyright';
-import { VStack } from '@chakra-ui/react';
+import { VStack, Image, Text } from '@chakra-ui/react';
 
 const Game = () => {
     const [isLoading, setIsLoading] = useState(true)
@@ -27,7 +28,18 @@ const Game = () => {
                   maxWidth='1000px'
                   bg='#AAB7CA'
             />
-            <LongFlight/>
+            {isMobile ? 
+              <Image 
+                src='shooting_game/images/skeleton.jpg'
+                alt='ゲームのタイトル画面'
+                w='80%'
+                maxWidth='1000px'
+                objectFit='cover'
+                filter='auto'
+                brightness='30%'
+              />
+              : 
+              <LongFlight/>}
             <Detail/>
           </VStack>
           <Copyright/>
