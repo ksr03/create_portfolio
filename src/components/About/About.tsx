@@ -39,7 +39,7 @@ const About = () => {
                 objectFit='cover'
             />
             <VStack>
-                <Text fontSize='27px'>しろさん</Text>
+                <Text padding='7px' fontSize='27px' borderBottom='1px solid #F5F5F5'>Haruka Koshiro</Text>
                 <Text fontSize='17px'>@ksr03_dev</Text>
             </VStack>
         </HStack>
@@ -93,10 +93,10 @@ const About = () => {
                     <Text fontWeight='bold'>表彰</Text>
                 </HStack>
                 <UnorderedList marginX='auto' paddingBottom='25px' w='90%' lineHeight='25px' fontSize='15px' style={{ whiteSpace: 'pre-wrap' }}>
-                    <ListItem>2022/12  技育CAMP「はじめてのハッカソン」vol.9に参加し、努力賞を頂きました。</ListItem>
-                    <ListItem>2023/3  技育CAMPアドバンスに参加し、GMOインターネットグループ株式会社から企業賞を頂きました。</ListItem>
-                    <ListItem>2024/3  技育CAMPマンスリーハッカソンvol.1に参加し、優秀賞を頂きました。</ListItem>
-                    <ListItem>2024/3  常盤工業会から常盤賞(学業優秀者)を頂きました。</ListItem>
+                    <ListItem>2022/12  技育CAMP「はじめてのハッカソン」vol.9にて「Shaminer」を開発し、努力賞を頂きました。</ListItem>
+                    <ListItem>2023/3  技育CAMPアドバンスにて「Shaminer」の機能追加を行い、GMOインターネットグループ株式会社より企業賞を頂きました。</ListItem>
+                    <ListItem>2024/3  技育CAMPマンスリーハッカソンvol.1にて「Imagiterior」を開発し、優秀賞を頂きました。</ListItem>
+                    <ListItem>2024/3  常盤工業会より常盤賞(学業優秀者)を頂きました。</ListItem>
                 </UnorderedList>
             </Box>
         </Box>

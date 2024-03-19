@@ -5,7 +5,7 @@ import Header from '@components/Common/Header'
 import LongFlight from '@components/ShootingGame/LongFlight'
 import Detail from '@components/ShootingGame/Detail';
 import Copyright from '@components/Common/Copyright';
-import { VStack, Image, Text } from '@chakra-ui/react';
+import { VStack, Image } from '@chakra-ui/react';
 
 const Game = () => {
     const [isLoading, setIsLoading] = useState(true)

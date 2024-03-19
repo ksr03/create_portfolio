@@ -1,23 +1,25 @@
 import React from 'react'
 import Modal from '@components/Works/Modal'
 import { useState } from 'react'
-import { HStack, Text, VStack } from '@chakra-ui/layout'
+import { HStack, Text, VStack, Spacer } from '@chakra-ui/layout'
 import { Image } from '@chakra-ui/image'
 import { FaHashtag } from 'react-icons/fa'
 
 type Props = {
     image: string
     title: string
+    scale: string
     introduction: string
     date: string
     skills: string
     detail: string
+    background: string
     focus: string
     github: string
     demo: string
 }
 
-const DevPart = ({image, title, introduction, date, skills, detail, focus, github, demo}: Props) => {
+const DevPart = ({image, title, scale, introduction, date, skills, detail, background, focus, github, demo}: Props) => {
     const [show, setShow] = useState(false)
     return (
     <>
@@ -25,7 +27,7 @@ const DevPart = ({image, title, introduction, date, skills, detail, focus, githu
             margin={15}
             bg='white' 
             w='200px' 
-            h='260px'
+            h='270px'
             borderRadius='5px'
             cursor='pointer'
             transition='.15s'
@@ -41,16 +43,15 @@ const DevPart = ({image, title, introduction, date, skills, detail, focus, githu
                 src={"dev/" + image + ".png"}
                 objectFit='cover'
             />
-            <Text 
-                marginLeft='8px' 
-                w='100%'
-                h='5px' 
-                textAlign='left'
-                fontSize='10px'
-                lineHeight='3px'
-            >
-                {date}
-            </Text>
+            <HStack paddingTop='2px' width='100%' height='12px' paddingX='8px'>
+                <Text textAlign='left' fontSize='11px'>
+                    {date}
+                </Text>
+                <Spacer/>
+                <Text paddingX='5px' rounded='full' bg='#E9F2F3' textAlign='right' fontSize='13px' color='#036a80'>
+                    {scale}
+                </Text>
+            </HStack>
             <Text h='30px' fontSize='20px' fontWeight='bold'>
                 {title}
             </Text>
@@ -76,6 +77,7 @@ const DevPart = ({image, title, introduction, date, skills, detail, focus, githu
             title={title}
             skills={skills}
             detail={detail}
+            background={background}
             focus={focus}
             github={github}
             demo={demo}

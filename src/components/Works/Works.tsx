@@ -1,15 +1,17 @@
 import React from 'react'
-import DevPart from '@components/Works/WorkPart'
+import WorkPart from '@components/Works/WorkPart'
 import { VStack, Wrap, WrapItem, Text, Box } from '@chakra-ui/layout'
 import developments from '@data/developments.json'
 
 type work_type = {
   image: string
   title: string
+  scale: string
   introduction: string
   date: string
   skills: string
   detail: string
+  background: string
   focus: string
   github: string
   demo: string
@@ -17,16 +19,18 @@ type work_type = {
 
 const Works = () => {
   // eslint-disable-next-line
-  const DevList:any = developments.map(( {image, title, introduction, date, skills, detail, focus, github, demo}: work_type, index: number )=>{
+  const WorkList:any = developments.map(( {image, title, scale, introduction, date, skills, detail, background, focus, github, demo}: work_type, index: number )=>{
     return (
       <WrapItem key={index}>
-          <DevPart 
+          <WorkPart 
             image={image} 
             title={title} 
+            scale={scale}
             introduction={introduction}
             date={date} 
             skills={skills}
             detail={detail}
+            background={background}
             focus={focus}
             github={github}
             demo={demo}
@@ -66,7 +70,7 @@ const Works = () => {
           marginX={15}
         >
           <Wrap spacing={4} justify='center'>
-            {DevList}
+            {WorkList}
           </Wrap>
         </Box>
     </VStack>
