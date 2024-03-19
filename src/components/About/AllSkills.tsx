@@ -1,16 +1,16 @@
 import React from 'react'
-import Skills from '@components/About/SkillList'
-import myskills from '@data/myskills.json'
+import SkillList from '@components/About/SkillList'
+import mySkillList from '@data/myskills.json'
 
-const AllSkills = () => {
+const AllSkillList = () => {
   return (
     <>
-        <Skills genre_name='フロントエンド' skill_list={myskills.front}/>
-        <Skills genre_name='バックエンド' skill_list={myskills.back}/>
-        <Skills genre_name='その他' skill_list={myskills.other}/>
-        <Skills genre_name='ツール' skill_list={myskills.tools}/>
+        <SkillList genre_name='フロントエンド' skill_list={mySkillList.front}/>
+        <SkillList genre_name='バックエンド' skill_list={mySkillList.back}/>
+        <SkillList genre_name='その他' skill_list={mySkillList.other}/>
+        <SkillList genre_name='ツール' skill_list={mySkillList.tools}/>
     </>
   )
 }
 
-export default AllSkills
+export default AllSkillList

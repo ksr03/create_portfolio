@@ -1,11 +1,13 @@
 import React from 'react'
 import getWindowSize from '@hooks/getWindowSize'
 import AllSkills from '@components/About/AllSkills'
-import Guide from '@components/Works/Guide'
+import Guide from '@components/About/Guide'
 import { VStack, HStack, Text, Box } from '@chakra-ui/layout'
+import { UnorderedList, ListItem } from '@chakra-ui/react'
 import { Image } from '@chakra-ui/image'
 import { LiaUserCircle } from 'react-icons/lia'
 import { RiComputerLine } from 'react-icons/ri'
+import { FaPencilAlt, FaMedal } from 'react-icons/fa'
 
 const About = () => {
     const w = getWindowSize()[0]
@@ -37,7 +39,7 @@ const About = () => {
                 objectFit='cover'
             />
             <VStack>
-                <Text fontSize='27px'>しろ</Text>
+                <Text fontSize='27px'>しろさん</Text>
                 <Text fontSize='17px'>@ksr03_dev</Text>
             </VStack>
         </HStack>
@@ -52,19 +54,51 @@ const About = () => {
             bg='whiteAlpha.500'
             borderRadius='10px'
         >
-            <HStack marginTop='5px' marginBottom='20px'>
-                <LiaUserCircle size='35px' color='#181818' />
-                <Text fontWeight='bold'>私について</Text>
-            </HStack>
-            <Text marginX='auto' paddingBottom='25px' w='95%' borderBottom='1px solid #F7F7F7' lineHeight='25px' fontSize='15px' >
-                工学部情報学科の4年生です。UI/UXやデザインに興味があります。バックエンド・フロントエンド共に学習中です。
-            </Text>
-            <HStack marginTop='30px' marginBottom='25px'>
-                <RiComputerLine size='32px' color='#181818' />
-                <Text fontWeight='bold'>使用できるスキル</Text>
-            </HStack>
-            <AllSkills />
-            <Guide />
+            {/* 私について */}
+            <Box width='100%' borderBottom='1px solid #F7F7F7'>
+                <HStack marginTop='5px' marginBottom='20px'>
+                    <LiaUserCircle size='35px' color='#181818' />
+                    <Text fontWeight='bold'>私について</Text>
+                </HStack>
+                <Text marginX='auto' paddingBottom='25px' w='95%' lineHeight='25px' fontSize='15px' >
+                    山口大学大学院1年生の神代春花と申します。<br/>
+                    エンジニアコミュニティや技術系イベント・勉強会などを通じて新たな技術を学んだり、スキルを伸ばしたりしています。
+                    バックエンド・フロントエンド共に学習中ですが、チーム開発ではフロントエンドを担当することが多いです。<br/>
+                    UI/UXに興味があり、将来はユーザー視点で利用しやすいサービスを作れるエンジニアになりたいと考えています。
+                </Text>
+            </Box>
+            {/* 使用できるスキル */}
+            <Box width='100%' paddingBottom='20px' borderBottom='1px solid #F7F7F7'>
+                <HStack marginTop='30px' marginBottom='25px'>
+                    <RiComputerLine size='32px' color='#181818' />
+                    <Text fontWeight='bold'>使用できるスキル</Text>
+                </HStack>
+                <AllSkills />
+                <Guide />
+            </Box>
+            {/* 資格・試験 */}
+            <Box width='100%' borderBottom='1px solid #F7F7F7'>
+                <HStack marginTop='30px' marginBottom='25px'>
+                    <FaPencilAlt size='30px' color='#181818' />
+                    <Text fontWeight='bold'>資格・試験</Text>
+                </HStack>
+                <Text marginX='auto' paddingBottom='25px' w='95%' lineHeight='25px' fontSize='15px'>
+                    基本情報技術者(2023年6月)、応用情報技術者(2023年12月)
+                </Text>
+            </Box>
+            {/* 表彰 */}
+            <Box width='100%'>
+                <HStack marginTop='30px' marginBottom='25px'>
+                    <FaMedal size='30px' color='#181818' />
+                    <Text fontWeight='bold'>表彰</Text>
+                </HStack>
+                <UnorderedList marginX='auto' paddingBottom='25px' w='90%' lineHeight='25px' fontSize='15px' style={{ whiteSpace: 'pre-wrap' }}>
+                    <ListItem>2022/12  技育CAMP「はじめてのハッカソン」vol.9に参加し、努力賞を頂きました。</ListItem>
+                    <ListItem>2023/3  技育CAMPアドバンスに参加し、GMOインターネットグループ株式会社から企業賞を頂きました。</ListItem>
+                    <ListItem>2024/3  技育CAMPマンスリーハッカソンvol.1に参加し、優秀賞を頂きました。</ListItem>
+                    <ListItem>2024/3  常盤工業会から常盤賞(学業優秀者)を頂きました。</ListItem>
+                </UnorderedList>
+            </Box>
         </Box>
     </VStack>
   )
