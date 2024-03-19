@@ -6,7 +6,7 @@ import { CloseIcon } from '@chakra-ui/icons'
 
 const ModalText = ({title, text}:{title:string, text:string}) => {
     return (
-        <HStack marginBottom='15px' paddingBottom='20px' w='90%' borderBottom='1px solid #DDDDDD'>
+        <HStack marginBottom='15px' paddingBottom='20px' w='90%' borderBottom='1px solid #DDDDDD' whiteSpace='pre-wrap'>
             <Text w='20%' textAlign='center' fontSize='14px' color='#036a80'>{title}</Text>
             <Text w='80%' fontSize='16px'>{text}</Text>
         </HStack>
@@ -20,12 +20,13 @@ type Props = {
     title: string
     skills: string
     detail: string
+    background: string
     focus: string
     github: string
     demo: string
 }
 
-const Modal = ({show, setShow, image, title, skills, detail, focus, github, demo}: Props) => {
+const Modal = ({show, setShow, image, title, skills, detail, background, focus, github, demo}: Props) => {
 
     //モーダルの状態
     //0:非表示から表示へ 1:表示中 2:表示から非表示へ
@@ -118,6 +119,7 @@ const Modal = ({show, setShow, image, title, skills, detail, focus, github, demo
                                     <Text w='80%' textAlign='center' fontSize='25px'>{title}</Text>
                                 </HStack>
                                 <ModalText title='概要' text={detail} />
+                                <ModalText title='背景' text={background} />
                                 <ModalText title='工夫' text={focus} />
                                 <ModalText title='技術' text={skills} />
                                 <LinkButton link={github} type='github' />
