@@ -1,5 +1,5 @@
 import React from 'react'
-import getWindowSize from '@hooks/getWindowSize'
+import getWindowSize from '@utils/getWindowSize'
 import AllSkills from '@components/About/AllSkills'
 import Guide from '@components/About/Guide'
 import { VStack, HStack, Text, Box } from '@chakra-ui/layout'
