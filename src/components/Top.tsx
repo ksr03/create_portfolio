@@ -1,5 +1,5 @@
 import React from 'react'
-import getWindowSize from '@hooks/getWindowSize'
+import getWindowSize from '@utils/getWindowSize'
 import { Center, Text, Image } from '@chakra-ui/react'
 
 const Top = () => {

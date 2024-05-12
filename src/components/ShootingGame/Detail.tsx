@@ -1,5 +1,5 @@
 import React from 'react'
-import getWindowSize from '@hooks/getWindowSize'
+import getWindowSize from '@utils/getWindowSize'
 import shooting_game from '@data/shooting_game.json'
 import LinkButton from '@components/Common/LinkButton'
 import { VStack, HStack, Box, Text } from '@chakra-ui/layout'
